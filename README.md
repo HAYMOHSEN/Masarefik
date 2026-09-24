@@ -5,6 +5,7 @@ Namaa Finance is a bilingual, local-first personal finance application designed 
 ## What is included
 
 - Arabic (RTL) and English interfaces with an in-app language switch.
+- A clean first-run experience with no sample financial values; users add their own accounts and records.
 - Income and expense tracking, categories, accounts, notes, and recurring payments.
 - Current balance, monthly cash flow, categories, budgets, goals, and financial reports.
 - A private financial vault for details such as insurance, loans, tax notes, contracts, and other financial references.

@@ -1,4 +1,4 @@
-const CACHE_NAME = "namaa-finance-shell-v1";
+const CACHE_NAME = "namaa-finance-shell-v2";
 const APP_SHELL = [
   "./",
   "./index.html",

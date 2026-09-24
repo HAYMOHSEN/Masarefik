@@ -3,7 +3,7 @@
  */
 
 const STORAGE_KEY = "namaa-finance-v1";
-const APP_VERSION = 1;
+const APP_VERSION = 2;
 
 const ICONS = {
   dashboard: `<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/></svg>`,
@@ -71,7 +71,7 @@ const I18N = {
     addAccountTitle: "Add an account", addAccountDetail: "Use separate accounts to understand where your money is held.", accountName: "Account name", saveAccount: "Add account", accountAdded: "Account added", accountDeleted: "Account deleted", cashAccount: "Cash", bankAccount: "Bank account", cardAccount: "Debit / credit card", savingsAccount: "Savings account",
     addRecordTitle: "Add financial record", addRecordDetail: "A private note for important financial information.", recordTitle: "Record title", recordType: "Record type", recordValue: "Value or reference", recordNotes: "Notes", saveRecord: "Save record", recordAdded: "Record saved", recordDeleted: "Record deleted", insurance: "Insurance", loan: "Loan / debt", tax: "Tax", contract: "Contract", document: "Document", other: "Other",
     backupTitle: "Back up your records", backupDetail: "Choose a secure place you control. Files are not sent anywhere by this app.", downloadBackup: "Download full backup", downloadBackupDetail: "Exports all records in a restorable JSON file.", importBackup: "Restore from backup", importBackupDetail: "Replaces current on-device data after your confirmation.", downloadTransactions: "Download transaction CSV", downloadTransactionsDetail: "Useful for spreadsheets and personal reporting.", backupDownloaded: "Backup downloaded", csvDownloaded: "CSV downloaded", backupRestored: "Backup restored", invalidBackup: "This file is not a valid Namaa backup.", confirmDelete: "Delete this item? This cannot be undone.", confirmRestore: "Replace your current on-device records with this backup?", close: "Close", systemBackup: "System backup", budget: "Budget", financialRecord: "Financial record",
-    noUpcoming: "No recurring payments scheduled", noUpcomingDetail: "Set the recurring option when adding a transaction.", goalFund: "Goal fund", viewSettings: "View preferences", month: "Month", categoryBreakdown: "Category breakdown", available: "Available", allAccounts: "All accounts", updatedToday: "Updated today", newEntry: "New entry", invalidAmount: "Enter an amount greater than zero.", completeRequired: "Complete the required fields.", validMonthlyLimit: "Enter a valid monthly limit.", completeGoal: "Complete the goal details.", completeAccount: "Complete the account details.", accountInUse: "Move or delete the account's transactions first."
+    noUpcoming: "No recurring payments scheduled", noUpcomingDetail: "Set the recurring option when adding a transaction.", goalFund: "Goal fund", viewSettings: "View preferences", month: "Month", categoryBreakdown: "Category breakdown", available: "Available", allAccounts: "All accounts", updatedToday: "Updated today", newEntry: "New entry", invalidAmount: "Enter an amount greater than zero.", completeRequired: "Complete the required fields.", validMonthlyLimit: "Enter a valid monthly limit.", completeGoal: "Complete the goal details.", completeAccount: "Complete the account details.", accountInUse: "Move or delete the account's transactions first.", welcomeToNamaa: "Start with a clean financial workspace", onboardingDetail: "Add your first account and begin recording what matters. Your records stay on this device until you choose to back them up.", startFirstAccount: "Add your first account", stepAccount: "Create your first account", stepTransaction: "Record income and expenses", stepPlan: "Set budgets and goals", reportEmpty: "Add a transaction to see your monthly financial pattern."
   },
   ar: {
     appName: "نماء للمال", dashboard: "لوحة التحكم", transactions: "العمليات", budgets: "الميزانيات", goals: "الأهداف", accounts: "الحسابات", reports: "التقارير", vault: "السجل المالي", settings: "التفضيلات",
@@ -90,7 +90,7 @@ const I18N = {
     addAccountTitle: "إضافة حساب", addAccountDetail: "استخدم حسابات منفصلة لمعرفة أين توجد أموالك.", accountName: "اسم الحساب", saveAccount: "إضافة الحساب", accountAdded: "تمت إضافة الحساب", accountDeleted: "تم حذف الحساب", cashAccount: "نقد", bankAccount: "حساب بنكي", cardAccount: "بطاقة خصم / ائتمان", savingsAccount: "حساب ادخار",
     addRecordTitle: "إضافة سجل مالي", addRecordDetail: "ملاحظة خاصة للمعلومات المالية المهمة.", recordTitle: "عنوان السجل", recordType: "نوع السجل", recordValue: "قيمة أو مرجع", recordNotes: "ملاحظات", saveRecord: "حفظ السجل", recordAdded: "تم حفظ السجل", recordDeleted: "تم حذف السجل", insurance: "تأمين", loan: "قرض / دين", tax: "ضريبة", contract: "عقد", document: "وثيقة", other: "أخرى",
     backupTitle: "نسخ سجلاتك احتياطياً", backupDetail: "اختر مكاناً آمناً تتحكم به. لا يرسل التطبيق الملفات إلى أي جهة.", downloadBackup: "تنزيل نسخة كاملة", downloadBackupDetail: "يُصدر كل السجلات في ملف JSON قابل للاستعادة.", importBackup: "استعادة من نسخة", importBackupDetail: "يستبدل بيانات هذا الجهاز بعد تأكيدك.", downloadTransactions: "تنزيل CSV للعمليات", downloadTransactionsDetail: "مفيد للجداول والتقارير الشخصية.", backupDownloaded: "تم تنزيل النسخة الاحتياطية", csvDownloaded: "تم تنزيل ملف CSV", backupRestored: "تمت استعادة النسخة", invalidBackup: "هذا الملف ليس نسخة نماء صالحة.", confirmDelete: "هل تريد حذف هذا العنصر؟ لا يمكن التراجع عن ذلك.", confirmRestore: "هل تريد استبدال سجلات هذا الجهاز بهذه النسخة؟", close: "إغلاق", systemBackup: "نسخة النظام", budget: "ميزانية", financialRecord: "سجل مالي",
-    noUpcoming: "لا توجد مدفوعات متكررة مجدولة", noUpcomingDetail: "فعّل خيار التكرار عند إضافة عملية جديدة.", goalFund: "صندوق الهدف", viewSettings: "عرض التفضيلات", month: "الشهر", categoryBreakdown: "تفصيل حسب الفئة", available: "متاح", allAccounts: "كل الحسابات", updatedToday: "تم التحديث اليوم", newEntry: "سجل جديد", invalidAmount: "أدخل مبلغاً أكبر من صفر.", completeRequired: "أكمل الحقول المطلوبة.", validMonthlyLimit: "أدخل حداً شهرياً صحيحاً.", completeGoal: "أكمل تفاصيل الهدف.", completeAccount: "أكمل تفاصيل الحساب.", accountInUse: "انقل أو احذف عمليات هذا الحساب أولاً."
+    noUpcoming: "لا توجد مدفوعات متكررة مجدولة", noUpcomingDetail: "فعّل خيار التكرار عند إضافة عملية جديدة.", goalFund: "صندوق الهدف", viewSettings: "عرض التفضيلات", month: "الشهر", categoryBreakdown: "تفصيل حسب الفئة", available: "متاح", allAccounts: "كل الحسابات", updatedToday: "تم التحديث اليوم", newEntry: "سجل جديد", invalidAmount: "أدخل مبلغاً أكبر من صفر.", completeRequired: "أكمل الحقول المطلوبة.", validMonthlyLimit: "أدخل حداً شهرياً صحيحاً.", completeGoal: "أكمل تفاصيل الهدف.", completeAccount: "أكمل تفاصيل الحساب.", accountInUse: "انقل أو احذف عمليات هذا الحساب أولاً.", welcomeToNamaa: "ابدأ بمساحة مالية نظيفة", onboardingDetail: "أضف حسابك الأول وابدأ بتسجيل ما يهمك. تبقى سجلاتك على هذا الجهاز إلى أن تختار نسخها احتياطياً.", startFirstAccount: "أضف حسابك الأول", stepAccount: "أنشئ حسابك الأول", stepTransaction: "سجّل الدخل والمصروفات", stepPlan: "ضع ميزانيات وأهدافاً", reportEmpty: "أضف عملية مالية لتظهر لك أنماطك المالية الشهرية."
   }
 };
 
@@ -151,46 +151,36 @@ function nextDateWithDay(day) {
 }
 
 function createDefaultState() {
-  const now = new Date();
-  const nextYear = now.getFullYear() + 1;
   return {
     version: APP_VERSION,
-    profile: { name: "Namaa User" },
+    profile: { name: "" },
     language: navigator.language?.toLowerCase().startsWith("ar") ? "ar" : "en",
     currency: "JOD",
     privacyMode: false,
     preferences: { monthlyReminder: true },
-    accounts: [
-      { id: "account-bank", name: "Main Bank", type: "bank", openingBalance: 680 },
-      { id: "account-cash", name: "Cash wallet", type: "cash", openingBalance: 160 },
-      { id: "account-savings", name: "Emergency savings", type: "savings", openingBalance: 1100 }
-    ],
-    transactions: [
-      { id: "t-salary", description: "Monthly salary", amount: 1250, type: "income", category: "salary", accountId: "account-bank", date: earlierThisMonth(3), note: "", recurring: true, frequency: "monthly" },
-      { id: "t-freelance", description: "Project payment", amount: 420, type: "income", category: "freelance", accountId: "account-bank", date: earlierThisMonth(8), note: "Website research support", recurring: false, frequency: "monthly" },
-      { id: "t-rent", description: "Apartment rent", amount: 250, type: "expense", category: "housing", accountId: "account-bank", date: earlierThisMonth(5), note: "", recurring: true, frequency: "monthly" },
-      { id: "t-electricity", description: "Electricity bill", amount: 52, type: "expense", category: "utilities", accountId: "account-bank", date: earlierThisMonth(12), note: "", recurring: true, frequency: "monthly" },
-      { id: "t-market", description: "Weekly groceries", amount: 74.2, type: "expense", category: "food", accountId: "account-cash", date: earlierThisMonth(15), note: "", recurring: false, frequency: "monthly" },
-      { id: "t-fuel", description: "Fuel refill", amount: 38, type: "expense", category: "transport", accountId: "account-cash", date: earlierThisMonth(18), note: "", recurring: false, frequency: "monthly" },
-      { id: "t-internet", description: "Home internet", amount: 28, type: "expense", category: "utilities", accountId: "account-bank", date: earlierThisMonth(20), note: "", recurring: true, frequency: "monthly" },
-      { id: "t-coffee", description: "Coffee with a friend", amount: 6.5, type: "expense", category: "food", accountId: "account-cash", date: earlierThisMonth(22), note: "", recurring: false, frequency: "monthly" },
-      { id: "t-medicine", description: "Pharmacy", amount: 18.8, type: "expense", category: "health", accountId: "account-cash", date: earlierThisMonth(24), note: "", recurring: false, frequency: "monthly" }
-    ],
-    budgets: [
-      { id: "b-food", category: "food", limit: 220 },
-      { id: "b-utilities", category: "utilities", limit: 120 },
-      { id: "b-transport", category: "transport", limit: 95 },
-      { id: "b-shopping", category: "shopping", limit: 150 }
-    ],
-    goals: [
-      { id: "g-emergency", name: "Emergency fund", target: 2000, saved: 1180, dueDate: `${nextYear}-03-30`, icon: "shield", color: "green" },
-      { id: "g-travel", name: "Family trip", target: 850, saved: 315, dueDate: `${nextYear}-06-20`, icon: "target", color: "gold" }
-    ],
-    vaultNotes: [
-      { id: "v-insurance", title: "Health insurance renewal", type: "insurance", value: "Policy ending 6724", notes: "Review the renewal offer two weeks before expiry.", updatedAt: isoDate(-2) },
-      { id: "v-tax", title: "Annual tax records", type: "tax", value: "Folder: Tax / current year", notes: "Keep invoices and income records for the annual filing.", updatedAt: isoDate(-7) }
-    ]
+    accounts: [],
+    transactions: [],
+    budgets: [],
+    goals: [],
+    vaultNotes: []
   };
+}
+
+const LEGACY_DEMO_IDS = {
+  accounts: new Set(["account-bank", "account-cash", "account-savings"]),
+  transactions: new Set(["t-salary", "t-freelance", "t-rent", "t-electricity", "t-market", "t-fuel", "t-internet", "t-coffee", "t-medicine"]),
+  budgets: new Set(["b-food", "b-utilities", "b-transport", "b-shopping"]),
+  goals: new Set(["g-emergency", "g-travel"]),
+  vaultNotes: new Set(["v-insurance", "v-tax"])
+};
+
+function isPristineLegacyDemo(data) {
+  return data?.version === 1 &&
+    Array.isArray(data.accounts) && data.accounts.length === LEGACY_DEMO_IDS.accounts.size && data.accounts.every((item) => LEGACY_DEMO_IDS.accounts.has(item.id)) &&
+    Array.isArray(data.transactions) && data.transactions.length === LEGACY_DEMO_IDS.transactions.size && data.transactions.every((item) => LEGACY_DEMO_IDS.transactions.has(item.id)) &&
+    Array.isArray(data.budgets) && data.budgets.length === LEGACY_DEMO_IDS.budgets.size && data.budgets.every((item) => LEGACY_DEMO_IDS.budgets.has(item.id)) &&
+    Array.isArray(data.goals) && data.goals.length === LEGACY_DEMO_IDS.goals.size && data.goals.every((item) => LEGACY_DEMO_IDS.goals.has(item.id)) &&
+    Array.isArray(data.vaultNotes) && data.vaultNotes.length === LEGACY_DEMO_IDS.vaultNotes.size && data.vaultNotes.every((item) => LEGACY_DEMO_IDS.vaultNotes.has(item.id));
 }
 
 function loadState() {
@@ -199,6 +189,7 @@ function loadState() {
     if (!raw) return createDefaultState();
     const parsed = JSON.parse(raw);
     if (!parsed || typeof parsed !== "object" || !Array.isArray(parsed.transactions)) return createDefaultState();
+    if (isPristineLegacyDemo(parsed)) return createDefaultState();
     return {
       ...createDefaultState(),
       ...parsed,
@@ -218,6 +209,14 @@ let state = loadState();
 let currentPage = "dashboard";
 let transactionFilter = "all";
 let transactionSearch = "";
+
+function isNewWorkspace() {
+  return !state.accounts.length && !state.transactions.length && !state.budgets.length && !state.goals.length && !state.vaultNotes.length;
+}
+
+function profileDisplayName() {
+  return state.profile.name || t("personalWorkspace");
+}
 
 function saveState() {
   state.version = APP_VERSION;
@@ -383,7 +382,7 @@ function applyLanguage() {
   const label = document.getElementById("languageLabel");
   if (label) label.textContent = state.language === "ar" ? "English" : "العربية";
   const profileName = document.getElementById("profileName");
-  if (profileName) profileName.textContent = state.profile.name;
+  if (profileName) profileName.textContent = profileDisplayName();
   const privacyButton = document.getElementById("privacyToggle");
   if (privacyButton) {
     privacyButton.dataset.icon = state.privacyMode ? "eyeOff" : "eye";
@@ -441,7 +440,25 @@ function greeting() {
   return hour < 12 ? t("greetingMorning") : hour < 18 ? t("greetingAfternoon") : t("greetingEvening");
 }
 
+function renderOnboarding() {
+  return `<section class="onboarding" aria-label="${esc(t("welcomeToNamaa"))}">
+    <article class="onboarding-card">
+      <div class="onboarding-mark">${icon("wallet")}</div>
+      <span class="onboarding-kicker">${esc(t("privateOnDevice"))}</span>
+      <h2>${esc(t("welcomeToNamaa"))}</h2>
+      <p>${esc(t("onboardingDetail"))}</p>
+      <div class="onboarding-steps">
+        <span><b>1</b>${esc(t("stepAccount"))}</span>
+        <span><b>2</b>${esc(t("stepTransaction"))}</span>
+        <span><b>3</b>${esc(t("stepPlan"))}</span>
+      </div>
+      <button class="primary-button onboarding-action" type="button" data-action="add-account">${icon("plus")}<span>${esc(t("startFirstAccount"))}</span></button>
+    </article>
+  </section>`;
+}
+
 function renderDashboard() {
+  if (isNewWorkspace()) return renderOnboarding();
   const income = monthIncome();
   const expense = monthExpense();
   const saved = monthSaved();
@@ -452,7 +469,7 @@ function renderDashboard() {
   return `
     <section class="dashboard-top">
       <div>
-        <h2>${esc(greeting())}, ${esc(state.profile.name)}</h2>
+        <h2>${esc(greeting())}</h2>
         <p>${esc(t("clearView"))}</p>
       </div>
       <button class="primary-button" type="button" data-action="add-transaction">${icon("plus")}<span>${esc(t("addTransaction"))}</span></button>
@@ -524,14 +541,23 @@ function renderDashboard() {
 }
 
 function renderCashFlowPanel() {
-  const income = monthIncome();
-  const expense = monthExpense();
-  const dataIncome = [920, 980, 1130, 1060, 1190, Math.max(income, 860)];
-  const dataExpense = [660, 710, 630, 750, 695, Math.max(expense, 310)];
+  if (!state.transactions.length) {
+    return `<article class="panel cashflow-panel"><div class="panel-heading"><div><h3>${esc(t("cashFlow"))}</h3><p>${esc(t("cashFlowDetail"))}</p></div></div>${renderFullEmpty(t("noTransactions"), t("reportEmpty"), "chart", "add-transaction", t("addTransaction"))}</article>`;
+  }
+  const dataIncome = [];
+  const dataExpense = [];
   const labels = [];
   for (let index = 5; index >= 0; index -= 1) {
     const date = new Date();
     date.setMonth(date.getMonth() - index);
+    const year = date.getFullYear();
+    const month = date.getMonth();
+    const transactions = state.transactions.filter((tx) => {
+      const transactionDate = new Date(`${tx.date}T12:00:00`);
+      return transactionDate.getFullYear() === year && transactionDate.getMonth() === month;
+    });
+    dataIncome.push(sumTransactions(transactions, "income"));
+    dataExpense.push(sumTransactions(transactions, "expense"));
     labels.push(new Intl.DateTimeFormat(getLocale(), { month: "short" }).format(date));
   }
   const max = Math.max(...dataIncome, ...dataExpense, 1) * 1.15;
@@ -722,7 +748,7 @@ function renderReportsPage() {
     </section>
     <section class="reports-grid">
       <div class="stack">
-        <article class="report-highlight"><p>${esc(t("monthlySnapshot"))} · ${esc(monthLabel())}</p><h3>${esc(t("healthyPace"))}</h3><div class="highlight-row"><span class="highlight-stat"><strong class="${visibilityClass()}">${money(saved)}</strong><span>${esc(t("savedThisMonth"))}</span></span><span class="highlight-stat"><strong>${income ? Math.max(0, Math.round((saved / income) * 100)) : 0}%</strong><span>${esc(t("ofIncomeSaved"))}</span></span><span class="highlight-stat"><strong>${budgetsTotal ? Math.min(100, Math.round((usedBudgets / budgetsTotal) * 100)) : 0}%</strong><span>${esc(t("plannedBudget"))}</span></span></div></article>
+        <article class="report-highlight"><p>${esc(t("monthlySnapshot"))} · ${esc(monthLabel())}</p><h3>${esc(t(state.transactions.length ? "healthyPace" : "reportEmpty"))}</h3><div class="highlight-row"><span class="highlight-stat"><strong class="${visibilityClass()}">${money(saved)}</strong><span>${esc(t("savedThisMonth"))}</span></span><span class="highlight-stat"><strong>${income ? Math.max(0, Math.round((saved / income) * 100)) : 0}%</strong><span>${esc(t("ofIncomeSaved"))}</span></span><span class="highlight-stat"><strong>${budgetsTotal ? Math.min(100, Math.round((usedBudgets / budgetsTotal) * 100)) : 0}%</strong><span>${esc(t("plannedBudget"))}</span></span></div></article>
         ${renderCashFlowPanel()}
       </div>
       <div class="stack">
