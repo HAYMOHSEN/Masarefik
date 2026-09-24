@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#10273f" />
+    <meta
+      name="description"
+      content="Namaa Finance is a bilingual, private finance tracker for income, expenses, budgets, and financial records."
+    />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="icons/icon.svg" />
+    <link rel="apple-touch-icon" href="icons/icon.svg" />
+    <title>Namaa Finance</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell" id="appShell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <div class="brand" aria-label="Namaa Finance">
+          <div class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img">
+              <path d="M12 36V24.5M24 36V15M36 36V8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="5" />
+              <path d="M8 36h32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="5" />
+              <path d="m10.5 16.5 9.5-7 6.3 4.3L38 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" />
+            </svg>
+          </div>
+          <span class="brand-name">Namaa<span>Finance</span></span>
+        </div>
+        <nav class="side-nav" id="sideNav"></nav>
+        <div class="sidebar-footer">
+          <button class="data-safety-card" id="openBackup" type="button">
+            <span class="safety-icon" data-icon="shield"></span>
+            <span>
+              <strong data-i18n="privateOnDevice">Private on this device</strong>
+              <small data-i18n="backupHint">Back up your records anytime</small>
+            </span>
+            <span class="safety-arrow" data-icon="chevron"></span>
+          </button>
+        </div>
+      </aside>
+
+      <div class="main-area">
+        <header class="topbar">
+          <button class="mobile-menu" id="mobileMenu" type="button" aria-label="Open menu" data-icon="menu"></button>
+          <div class="page-context">
+            <p class="eyebrow" id="pageEyebrow"></p>
+            <h1 id="pageTitle"></h1>
+          </div>
+          <div class="top-actions">
+            <button class="icon-button privacy-toggle" id="privacyToggle" type="button" aria-label="Hide balances" title="Hide balances" data-icon="eye"></button>
+            <button class="language-toggle" id="languageToggle" type="button" aria-label="Change language">
+              <span class="globe" data-icon="globe"></span>
+              <span id="languageLabel">العربية</span>
+            </button>
+            <button class="profile-button" type="button" id="profileMenu" aria-label="Open preferences">
+              <span class="profile-avatar">N</span>
+              <span class="profile-copy">
+                <strong id="profileName">Namaa User</strong>
+                <small data-i18n="personalWorkspace">Personal workspace</small>
+              </span>
+              <span data-icon="chevron"></span>
+            </button>
+          </div>
+        </header>
+
+        <main class="content" id="appContent" tabindex="-1"></main>
+
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation"></nav>
+      </div>
+    </div>
+
+    <div class="modal-layer" id="modalLayer" aria-live="polite"></div>
+    <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

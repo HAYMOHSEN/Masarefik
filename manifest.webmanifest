@@ -1,0 +1,23 @@
+{
+  "name": "Namaa Finance | نماء للمال",
+  "short_name": "Namaa",
+  "description": "A private bilingual finance tracker for income, expenses, budgets, goals, and financial records.",
+  "id": "/",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#edf3f8",
+  "theme_color": "#10273f",
+  "lang": "en",
+  "dir": "auto",
+  "categories": ["finance", "productivity"],
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
