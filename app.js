@@ -5,7 +5,7 @@
 const STORAGE_KEY = "namaa-finance-v1";
 const APP_VERSION = 3;
 const APP_VERSION_LABEL = "3.0";
-const SUPPORT_EMAIL = "haymohse@gmail.com";
+const SUPPORT_EMAIL = "haymohsen@gmail.com";
 const LOCK_KEY = "namaa-finance-lock";
 const LOCK_AFTER_MS = 5 * 60 * 1000;
 
