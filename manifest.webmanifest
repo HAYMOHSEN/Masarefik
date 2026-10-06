@@ -2,7 +2,7 @@
   "name": "Namaa Finance | نماء للمال",
   "short_name": "Namaa",
   "description": "A private bilingual finance tracker for income, expenses, budgets, goals, and financial records.",
-  "id": "/",
+  "id": "/Masarefik/",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

@@ -1,35 +1,21 @@
-# Namaa Finance | نماء للمال
+# Namaa Finance — fix for the shared app identity
 
-Namaa Finance is a bilingual, local-first personal finance application designed for a Microsoft Store release. It runs as an installable Progressive Web App (PWA), so Windows users can download it from the Store and use it like a desktop app.
+Repository: **HAYMOHSEN/Masarefik** — app URL: https://haymohsen.github.io/Masarefik/
 
-## What is included
+## What changed (nothing else in the repository changes)
 
-- Arabic (RTL) and English interfaces with an in-app language switch.
-- A clean first-run experience with no sample financial values; users add their own accounts and records.
-- Income and expense tracking, categories, accounts, notes, and recurring payments.
-- Current balance, monthly cash flow, categories, budgets, goals, and financial reports.
-- A private financial vault for details such as insurance, loans, tax notes, contracts, and other financial references.
-- On-device data storage by default, with JSON backup/restore and CSV export.
-- Responsive Windows desktop and mobile layouts, keyboard support, an offline cache, and a custom app icon.
+- `manifest.webmanifest`: `"id": "/"` → `"id": "/Masarefik/"`
+  (identity was `https://haymohsen.github.io/`, shared with your other apps; it is now `https://haymohsen.github.io/Masarefik/`)
+- `service-worker.js`: `const CACHE_NAME = "namaa-finance-shell-v3";` → `const CACHE_NAME = "namaa-finance-shell-v4";`
+- `service-worker.js`: `keys.filter((key) => key !== CACHE_NAME)` → `keys.filter((key) => key.startsWith('namaa-finance-') && key !== CACHE_NAME)`
+- The activate handler now deletes only Namaa Finance's own old caches (names starting with "namaa-finance-") instead of every cache on the site, so it no longer wipes the offline copies of your other apps.
 
-## Run locally
+The cache-version bump makes Edge fetch the new manifest instead of the copy it cached; users see no difference apart from a quick re-download of the app files on their next launch.
 
-Serve this directory with any local static web server, then open `index.html` in a modern Chromium-based browser. The service worker enables offline behavior only when the app is served from `localhost` or HTTPS.
+## Steps
 
-Example:
-
-```bash
-python3 -m http.server 4173
-```
-
-Then open `http://localhost:4173`.
-
-## Data model and privacy
-
-The initial build stores records in the app's local browser storage on the user's device. It does not connect to a bank, share records, or send financial data to a backend. Users should download a backup before changing devices or clearing application data.
-
-For a production cloud-sync edition, add an authenticated backend, end-to-end encryption design, account recovery, a privacy policy, and a security review before handling sensitive data.
-
-## Store-release handoff
-
-See [STORE_SUBMISSION.md](STORE_SUBMISSION.md) for the Microsoft Store preparation path, release checklist, and items that require the publisher's Partner Center account.
+1. On GitHub open the repository → **Add file → Upload files** → drop the file(s) from this folder (they overwrite the old ones with the same names) → **Commit changes**. You can instead open each file, click the pencil icon and paste the new content.
+2. Wait about a minute, then open https://haymohsen.github.io/Masarefik/manifest.webmanifest in a browser and check that it shows `"id": "/Masarefik/"`.
+3. Go to pwabuilder.com → enter `https://haymohsen.github.io/Masarefik/` → **Package for stores → Windows**. Use the same Package ID, Publisher ID and Publisher display name as the previous package and the app name exactly as reserved in Partner Center. Expand the full settings (the "Classic app version" field is hidden by default) and type **App version `1.2.0`** and **Classic app version `1.1.9`** — both higher than the first submission's packages, with the classic number below the app version. Generate and download the package.
+4. Partner Center → this app → **Update** (new submission) → **Packages** → upload both the `.msixbundle` and the `.classic.appxbundle` → Submit. Listing, price and trial stay as they are. If Partner Center reports a package "with the same full name", a version number was left at its default — regenerate with the numbers above and replace the uploaded packages.
+5. On your own PC uninstall the old copy (Settings → Apps, and `edge://apps`) before installing the updated one to test. Customers keep their data — it is stored per website, not per app identity.
