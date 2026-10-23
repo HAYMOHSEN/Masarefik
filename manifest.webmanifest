@@ -1,7 +1,7 @@
 {
   "name": "Namaa Finance | نماء للمال",
   "short_name": "Namaa",
-  "description": "A private bilingual finance tracker for income, expenses, budgets, goals, and financial records.",
+  "description": "A private Arabic/English finance tracker with optional password encryption, budgets, goals, transfers and bill tracking.",
   "id": "/Masarefik/",
   "start_url": "./index.html",
   "scope": "./",
@@ -11,7 +11,10 @@
   "theme_color": "#10273f",
   "lang": "en",
   "dir": "auto",
-  "categories": ["finance", "productivity"],
+  "categories": [
+    "finance",
+    "productivity"
+  ],
   "icons": [
     {
       "src": "icons/icon-192.png",

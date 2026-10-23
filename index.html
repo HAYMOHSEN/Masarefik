@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; worker-src 'self'; manifest-src 'self'" />
+    <meta name="referrer" content="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#10273f" />
     <meta
@@ -14,9 +16,12 @@
     <link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192.png" />
     <title>Namaa Finance</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="enhancements.css" />
   </head>
   <body>
-    <div class="app-shell" id="appShell">
+    <section id="lockScreen" class="lock-screen" aria-label="Namaa Finance" hidden></section>
+    <noscript><p class="fatal-message">Namaa Finance requires JavaScript to open your local records. نماء للمال يحتاج إلى JavaScript.</p></noscript>
+    <div class="app-shell" id="appShell" hidden>
       <aside class="sidebar" aria-label="Primary navigation">
         <div class="brand" aria-label="Namaa Finance">
           <div class="brand-mark" aria-hidden="true">
@@ -38,6 +43,7 @@
             </span>
             <span class="safety-arrow" data-icon="chevron"></span>
           </button>
+          <a class="legal-link" href="privacy.html" data-i18n="privacyPolicy">Privacy policy</a>
         </div>
       </aside>
 
@@ -49,6 +55,8 @@
             <h1 id="pageTitle"></h1>
           </div>
           <div class="top-actions">
+            <span id="saveStatus" class="save-status" role="status"></span>
+            <button class="icon-button" id="lockButton" type="button" data-action="lock-workspace" data-icon="lock" aria-label="Lock workspace" title="Lock workspace"></button>
             <button class="icon-button privacy-toggle" id="privacyToggle" type="button" aria-label="Hide balances" title="Hide balances" data-icon="eye"></button>
             <button class="language-toggle" id="languageToggle" type="button" aria-label="Change language">
               <span class="globe" data-icon="globe"></span>
@@ -65,9 +73,7 @@
           </div>
         </header>
 
-        <div class="notice-bar" id="noticeBar" hidden></div>
         <main class="content" id="appContent" tabindex="-1"></main>
-        <input id="restoreInput" class="visually-hidden" type="file" accept="application/json,.json" />
 
         <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation"></nav>
       </div>
@@ -75,6 +81,9 @@
 
     <div class="modal-layer" id="modalLayer" aria-live="polite"></div>
     <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
-    <script src="app.js"></script>
+    <script src="vault.js" defer></script>
+    <script src="finance-core.js" defer></script>
+    <script src="app.js" defer></script>
+    <script src="enhancements.js" defer></script>
   </body>
 </html>

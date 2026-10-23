@@ -1,62 +1,46 @@
-# Microsoft Store release handoff
+# Microsoft Store update handoff
 
-## Delivery model
+This delivery contains the PWA source and updated bilingual release copy. It is not a signed Windows package and has not been published. Keep your existing product name, Package ID, Publisher ID, publisher display name, domain and manifest identity when updating an existing listing. Do not reserve a replacement product merely to apply this update.
 
-This project is an installable PWA. Microsoft supports publishing PWAs to the Microsoft Store; the packaged app is submitted as an MSIX package. This route preserves the fast, local-first application while giving Windows users normal Store discovery, installation, and updates.
+## Update sequence
 
-## What is ready in this project
+1. Export a backup from the currently installed app before deployment. If your live source is newer than the recovered 24 September package, merge its changes first.
+2. Host these source files at the current HTTPS app URL. Keep the privacy page publicly accessible at the existing privacy URL. Reload and confirm that the new lock controls, bills and transfers pages appear.
+3. Test existing-data migration, password setup, closing/reopening, offline launch, encrypted backup/restore, display scaling, keyboard use, and Arabic/English in the actual installed Windows app.
+4. If your Store submission requires an updated Windows package, generate it from the live HTTPS URL with PWABuilder using the existing Partner Center product identity and an increased package version. Complete the package's Windows validation before uploading it to the existing product's update submission.
+5. Update the listing text and privacy disclosures to match this build. Original screenshots under `store-assets` are historical artwork; replace those screenshots with captures of the finished Windows app before submission. No new screenshots are presented as Store-ready in this source package.
+6. Submit from your Partner Center account after completing your normal certification and signing requirements.
 
-- Valid web-app manifest, standalone display mode, custom icon, and service worker.
-- A bilingual English/Arabic interface, including right-to-left layout support.
-- Local-first financial records, JSON backup/restore, and CSV export.
-- Store-facing identity: `Namaa Finance | نماء للمال` (a working name that should be checked for availability before submission).
+Microsoft's current reference: https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/how-to/microsoft-store (consulted 23 October 2026).
 
-## Publisher steps that require your Microsoft account
+## What's new — English
 
-1. Reserve the final application name in Microsoft Partner Center.
-2. Host this PWA at a stable public HTTPS address. A Store PWA needs a public URL; a local `localhost` build cannot be submitted.
-3. Use PWABuilder to validate the hosted PWA and create the Microsoft Store / MSIX package.
-4. In Partner Center, create the Store listing, upload the package, and add current screenshots, description, support contact, and privacy-policy URL.
-5. Complete age rating, markets, pricing, and policy declarations; then submit for certification.
+Optional password protection now encrypts your saved financial records. Lock the app manually, after inactivity, or when hidden. Export encrypted backups and restore older Namaa backups. Record transfers between accounts without inflating income or expenses, track bills and subscriptions, filter transactions, duplicate entries, and print reports. Personalize your display name and theme. This update also corrects monthly comparisons, recurring dates and three-decimal JOD calculations.
 
-## Recommended Store listing copy
+## الجديد في هذه النسخة — العربية
 
-### English short description
+حماية اختيارية بكلمة مرور مع تشفير السجلات المالية المحفوظة، وقفل يدوي وتلقائي بعد عدم الاستخدام أو عند إخفاء التطبيق. نسخ احتياطية مشفرة مع دعم استعادة نسخ نماء القديمة. تسجيل التحويلات بين الحسابات دون إضافتها إلى الدخل والمصروفات، ومتابعة الفواتير والاشتراكات، وفلترة العمليات وتكرارها وطباعة التقارير. تخصيص اسم العرض والمظهر. تصحيح المقارنات الشهرية ومواعيد التكرار وحسابات الدينار الأردني بثلاث خانات عشرية.
 
-Track income, expenses, budgets, goals, and private financial records in one bilingual workspace.
+## Features — English
 
-### Arabic short description
+- Optional encrypted local workspace with password and automatic locking.
+- Encrypted full backups; legacy JSON restore; CSV export.
+- Income, spending, accounts, budgets, goals and private financial notes.
+- Account transfers, bill and subscription schedules, payment recording.
+- Search and filters by type, account, category and date.
+- Arabic/English, RTL, light/dark theme and printable reports.
+- Offline use after the app has loaded successfully.
 
-سجّل الدخل والمصروفات والميزانيات والأهداف والسجلات المالية الخاصة في مساحة واحدة ثنائية اللغة.
+## المزايا — العربية
 
-### Product highlights
+- مساحة محلية مشفرة اختيارياً بكلمة مرور وقفل تلقائي.
+- نسخ احتياطية كاملة مشفرة واستعادة JSON القديم وتصدير CSV.
+- الدخل والمصروفات والحسابات والميزانيات والأهداف والملاحظات المالية.
+- التحويلات بين الحسابات وجدولة الفواتير والاشتراكات وتسجيل السداد.
+- البحث والتصفية حسب النوع والحساب والفئة والتاريخ.
+- العربية والإنجليزية ودعم RTL والمظهر الفاتح والداكن وطباعة التقارير.
+- العمل دون اتصال بعد تحميل التطبيق بنجاح.
 
-- Add income and expenses in seconds.
-- Understand your monthly cash flow, spending categories, and account balances.
-- Create monthly budgets and savings goals.
-- Keep recurring payments visible before they are due.
-- Store private financial references alongside your transactions.
-- Keep the first version local to the device, and export a full backup whenever needed.
+## Accurate descriptions
 
-## Required release materials
-
-- Final app name and publisher identity.
-- Public HTTPS production URL.
-- Store package generated from the hosted PWA.
-- Desktop and mobile screenshots captured from the finished app.
-- Privacy policy that accurately describes on-device storage, backups, analytics, support contacts, and any future cloud or bank-connection features.
-- Support email address and website.
-- Finalised app icon and Store artwork generated from the provided vector icon.
-
-## Production safeguards before a paid/public financial release
-
-- Add a tested privacy policy and clear in-app disclosure of local versus cloud storage.
-- Perform accessibility, security, and Store certification testing on Windows 10 and Windows 11.
-- If cloud sync is added: use user authentication, encrypted transport, encrypted data storage, account recovery, and a security review.
-- Do not claim bank-grade encryption, bank connectivity, investment advice, tax advice, or automatic currency conversion unless those capabilities are actually implemented and validated.
-
-## Useful official Microsoft references
-
-- Microsoft Learn: publish a PWA to the Microsoft Store.
-- Microsoft Learn: package a Windows app with MSIX.
-- Microsoft Learn: Windows app distribution paths.
+Protection is optional. There is no password reset, bank integration, automatic bill payment, cloud synchronization or currency conversion. CSV and printed/PDF reports are not encrypted. Goal contributions only track progress. Do not claim bank-grade security, an independent audit, guaranteed recovery, native Windows Hello, or Store certification for this delivery.

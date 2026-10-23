@@ -4,10 +4,6 @@
 
 const STORAGE_KEY = "namaa-finance-v1";
 const APP_VERSION = 3;
-const APP_VERSION_LABEL = "3.0";
-const SUPPORT_EMAIL = "haymohsen@gmail.com";
-const LOCK_KEY = "namaa-finance-lock";
-const LOCK_AFTER_MS = 5 * 60 * 1000;
 
 const ICONS = {
   dashboard: `<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.8"/></svg>`,
@@ -59,10 +55,7 @@ const ICONS = {
 
 const I18N = {
   en: {
-    privacyPolicy: "Privacy policy", protectTitle: "Protect your records", protectBody1: "Namaa keeps your records in this app’s own storage on this device. That storage is deleted together with the browser’s browsing data, for example by a “clear browsing data” setting or a cleaning tool, and the app cannot bring the records back on its own.", protectBody2: "Choose a backup file once, for example in Documents or OneDrive. Every change is written to it a moment later, and if the app ever starts empty, your records are restored from that file.", protectChoose: "Choose backup file", protectLater: "Not now", protectNudge: "Keep your records safe if browser data is ever cleared: turn on automatic backup.", protectTurnOn: "Turn on", protectAllow: "Allow", protectRestoreOffer: "Your records can be restored from your backup file.", protectRestoreButton: "Restore", protectRestored: "Records restored from your backup file", protectStatusOn: "Automatic backup is on: {name}", protectStatusOff: "Automatic backup is off.", protectStatusPaused: "Automatic backup is paused until you allow access to {name}.", protectStatusError: "The backup file could not be written. Choose a file again.", protectUnsupported: "Automatic backup is not available in this browser. Download a backup file instead.", protectOn: "Automatic backup is on", protectOff: "Automatic backup is off. The file itself is kept.", protectChange: "Choose another file", protectTurnOff: "Turn off", protectSaved: "Backup saved", autoBackup: "Automatic backup", autoBackupDetail: "Keep a live copy of your records in a file you choose.", restoreFromFile: "Restore from a backup file", whereData: "Your records are kept in this app’s storage on this device. Clearing the browser’s browsing data, or a setting that clears it on close, deletes them. Automatic backup writes every change to a file you choose and restores your records if the app ever starts empty.", contactDeveloper: "Contact the developer", aboutApp: "About Namaa Finance", versionLabel: "Version", dismiss: "Dismiss",
-    appLock: "App lock", appLockDetail: "Ask for a PIN when the app opens or returns after a while.", pinTitle: "Set your PIN", pinDetail: "4 to 8 digits. The PIN keeps casual onlookers out of the app; it does not encrypt your data, and it is not included in backups.", pin: "PIN", confirmPin: "Confirm PIN", pinMismatch: "The two PINs do not match.", pinInvalid: "Use 4 to 8 digits.", pinSet: "App lock is on", pinRemoved: "App lock is off", unlockTitle: "Enter your PIN", unlock: "Unlock", wrongPin: "Wrong PIN. Try again.", forgotPin: "Forgot your PIN? Clear the app’s data in the browser or reinstall the app, then restore your records from a backup file.", removePinTitle: "Turn off app lock", removePinDetail: "Enter your current PIN to turn the lock off.",
-    recordNow: "Record", recordedNow: "Recorded", dueToday: "Due today", overdue: "Overdue", duplicate: "Duplicate", recordDuplicated: "Transaction duplicated", budgetAlert: "Budgets that need attention", overLimit: "over limit", nearLimit: "near limit", vsLastMonth: "vs last month", printReport: "Print report", expensesUp: "Expenses up {p}% vs last month", expensesDown: "Expenses down {p}% vs last month", expensesSame: "Expenses about the same as last month",
-    appName: "Namaa Finance", dashboard: "Dashboard", transactions: "Transactions", budgets: "Budgets", goals: "Goals", accounts: "Accounts", reports: "Reports", vault: "Financial vault", settings: "Preferences",
+    appName: "Namaa Finance", dashboard: "Dashboard", transactions: "Transactions", budgets: "Budgets", goals: "Goals", accounts: "Accounts", reports: "Reports", vault: "Financial vault", settings: "Preferences", privacyPolicy: "Privacy policy",
     privateOnDevice: "Private on this device", backupHint: "Back up your records anytime", personalWorkspace: "Personal workspace", overview: "Your money, in focus", hideBalances: "Hide balances", showBalances: "Show balances",
     greetingMorning: "Good morning", greetingAfternoon: "Good afternoon", greetingEvening: "Good evening", clearView: "Here is a clear view of your money this month.", addTransaction: "Add transaction", currentBalance: "Total balance", availableAcross: "Available across your accounts", incomeThisMonth: "Income this month", expenseThisMonth: "Expenses this month", savedThisMonth: "Saved this month", fromLastMonth: "from last month", cashFlow: "Cash flow", cashFlowDetail: "Income and spending over the last six months", income: "Income", expense: "Expense", recentActivity: "Recent activity", seeAll: "See all", thisMonth: "This month", budgetProgress: "Budget progress", spendingByCategory: "Spending by category", upcomingPayments: "Upcoming payments", quickActions: "Quick actions", addExpense: "Add expense", addIncome: "Add income", createBudget: "Create budget", createGoal: "Create goal",
     manageTransactions: "Keep every income and expense in one clear timeline.", searchTransactions: "Search transactions", all: "All", noTransactions: "No transactions found", noTransactionsDetail: "Add your first income or expense to start building your financial picture.", date: "Date", description: "Description", category: "Category", account: "Account", type: "Type", amount: "Amount", actions: "Actions", edit: "Edit", delete: "Delete", recurring: "Recurring", once: "One time",
@@ -81,10 +74,7 @@ const I18N = {
     noUpcoming: "No recurring payments scheduled", noUpcomingDetail: "Set the recurring option when adding a transaction.", goalFund: "Goal fund", viewSettings: "View preferences", month: "Month", categoryBreakdown: "Category breakdown", available: "Available", allAccounts: "All accounts", updatedToday: "Updated today", newEntry: "New entry", invalidAmount: "Enter an amount greater than zero.", completeRequired: "Complete the required fields.", validMonthlyLimit: "Enter a valid monthly limit.", completeGoal: "Complete the goal details.", completeAccount: "Complete the account details.", accountInUse: "Move or delete the account's transactions first.", welcomeToNamaa: "Start with a clean financial workspace", onboardingDetail: "Add your first account and begin recording what matters. Your records stay on this device until you choose to back them up.", startFirstAccount: "Add your first account", stepAccount: "Create your first account", stepTransaction: "Record income and expenses", stepPlan: "Set budgets and goals", reportEmpty: "Add a transaction to see your monthly financial pattern."
   },
   ar: {
-    privacyPolicy: "سياسة الخصوصية", protectTitle: "احمِ سجلاتك", protectBody1: "يحفظ نماء سجلاتك في مساحة التخزين الخاصة بهذا التطبيق على هذا الجهاز. تُحذف هذه المساحة مع بيانات التصفح في المتصفح، مثلًا عبر إعداد «مسح بيانات التصفح» أو أداة تنظيف، ولا يستطيع التطبيق استعادة السجلات من تلقاء نفسه.", protectBody2: "اختر ملف نسخ احتياطي مرة واحدة، مثلًا في «المستندات» أو OneDrive. يُكتب كل تغيير فيه بعد لحظة، وإذا فُتح التطبيق فارغًا يومًا ما، تُستعاد سجلاتك من ذلك الملف.", protectChoose: "اختيار ملف النسخ الاحتياطي", protectLater: "ليس الآن", protectNudge: "احفظ سجلاتك في مأمن إذا مُسحت بيانات المتصفح يومًا: فعّل النسخ الاحتياطي التلقائي.", protectTurnOn: "تفعيل", protectAllow: "السماح", protectRestoreOffer: "يمكن استعادة سجلاتك من ملف النسخ الاحتياطي.", protectRestoreButton: "استعادة", protectRestored: "استُعيدت السجلات من ملف النسخ الاحتياطي", protectStatusOn: "النسخ الاحتياطي التلقائي مفعّل: {name}", protectStatusOff: "النسخ الاحتياطي التلقائي متوقف.", protectStatusPaused: "النسخ الاحتياطي التلقائي متوقف مؤقتًا حتى تسمح بالوصول إلى {name}.", protectStatusError: "تعذّرت كتابة ملف النسخ الاحتياطي. اختر ملفًا من جديد.", protectUnsupported: "النسخ الاحتياطي التلقائي غير متاح في هذا المتصفح. نزّل ملف نسخة احتياطية بدلًا منه.", protectOn: "النسخ الاحتياطي التلقائي مفعّل", protectOff: "أُوقف النسخ الاحتياطي التلقائي. الملف نفسه محفوظ.", protectChange: "اختيار ملف آخر", protectTurnOff: "إيقاف", protectSaved: "حُفظت النسخة الاحتياطية", autoBackup: "النسخ الاحتياطي التلقائي", autoBackupDetail: "احتفظ بنسخة حيّة من سجلاتك في ملف تختاره.", restoreFromFile: "استعادة من ملف نسخة احتياطية", whereData: "تُحفظ سجلاتك في مساحة تخزين هذا التطبيق على هذا الجهاز. مسح بيانات التصفح في المتصفح، أو إعداد يمسحها عند الإغلاق، يحذفها. يكتب النسخ الاحتياطي التلقائي كل تغيير في ملف تختاره ويستعيد سجلاتك إذا فُتح التطبيق فارغًا.", contactDeveloper: "التواصل مع المطوّر", aboutApp: "عن نماء للمال", versionLabel: "الإصدار", dismiss: "إغلاق",
-    appLock: "قفل التطبيق", appLockDetail: "اطلب رمز PIN عند فتح التطبيق أو العودة إليه بعد فترة.", pinTitle: "حدّد رمز PIN", pinDetail: "من 4 إلى 8 أرقام. يمنع الرمز الفضوليين من فتح التطبيق، لكنه لا يشفّر بياناتك ولا يُضمَّن في النسخ الاحتياطية.", pin: "رمز PIN", confirmPin: "تأكيد الرمز", pinMismatch: "الرمزان غير متطابقين.", pinInvalid: "استخدم من 4 إلى 8 أرقام.", pinSet: "قفل التطبيق مفعّل", pinRemoved: "قفل التطبيق متوقف", unlockTitle: "أدخل رمز PIN", unlock: "فتح", wrongPin: "الرمز غير صحيح. حاول مجددًا.", forgotPin: "نسيت الرمز؟ امسح بيانات التطبيق في المتصفح أو أعد تثبيت التطبيق، ثم استعد سجلاتك من ملف نسخة احتياطية.", removePinTitle: "إيقاف قفل التطبيق", removePinDetail: "أدخل رمزك الحالي لإيقاف القفل.",
-    recordNow: "تسجيل", recordedNow: "سُجّلت", dueToday: "مستحقة اليوم", overdue: "متأخرة", duplicate: "تكرار", recordDuplicated: "تم تكرار العملية", budgetAlert: "ميزانيات تحتاج انتباهك", overLimit: "تجاوزت الحد", nearLimit: "قريبة من الحد", vsLastMonth: "مقارنة بالشهر الماضي", printReport: "طباعة التقرير", expensesUp: "المصروفات أعلى بنسبة {p}% من الشهر الماضي", expensesDown: "المصروفات أقل بنسبة {p}% من الشهر الماضي", expensesSame: "المصروفات مقاربة للشهر الماضي",
-    appName: "نماء للمال", dashboard: "لوحة التحكم", transactions: "العمليات", budgets: "الميزانيات", goals: "الأهداف", accounts: "الحسابات", reports: "التقارير", vault: "السجل المالي", settings: "التفضيلات",
+    appName: "نماء للمال", dashboard: "لوحة التحكم", transactions: "العمليات", budgets: "الميزانيات", goals: "الأهداف", accounts: "الحسابات", reports: "التقارير", vault: "السجل المالي", settings: "التفضيلات", privacyPolicy: "سياسة الخصوصية",
     privateOnDevice: "خاص على هذا الجهاز", backupHint: "انسخ سجلاتك احتياطياً في أي وقت", personalWorkspace: "مساحة مالية شخصية", overview: "أموالك في صورة واضحة", hideBalances: "إخفاء الأرصدة", showBalances: "إظهار الأرصدة",
     greetingMorning: "صباح الخير", greetingAfternoon: "مساء الخير", greetingEvening: "مساء الخير", clearView: "هذه صورة واضحة لأموالك خلال هذا الشهر.", addTransaction: "إضافة عملية", currentBalance: "إجمالي الرصيد", availableAcross: "متاح عبر حساباتك", incomeThisMonth: "دخل هذا الشهر", expenseThisMonth: "مصروفات هذا الشهر", savedThisMonth: "المدخر هذا الشهر", fromLastMonth: "مقارنة بالشهر الماضي", cashFlow: "التدفق النقدي", cashFlowDetail: "الدخل والإنفاق خلال آخر ستة أشهر", income: "دخل", expense: "مصروف", recentActivity: "أحدث العمليات", seeAll: "عرض الكل", thisMonth: "هذا الشهر", budgetProgress: "تقدم الميزانيات", spendingByCategory: "الإنفاق حسب الفئة", upcomingPayments: "مدفوعات قادمة", quickActions: "إجراءات سريعة", addExpense: "إضافة مصروف", addIncome: "إضافة دخل", createBudget: "إنشاء ميزانية", createGoal: "إنشاء هدف",
     manageTransactions: "سجّل كل دخل ومصروف في تسلسل واضح وسهل المتابعة.", searchTransactions: "ابحث في العمليات", all: "الكل", noTransactions: "لا توجد عمليات مطابقة", noTransactionsDetail: "أضف أول دخل أو مصروف لتبدأ بتكوين صورة مالية واضحة.", date: "التاريخ", description: "الوصف", category: "الفئة", account: "الحساب", type: "النوع", amount: "المبلغ", actions: "إجراءات", edit: "تعديل", delete: "حذف", recurring: "متكرر", once: "مرة واحدة",
@@ -142,9 +132,8 @@ function uid(prefix = "item") {
 
 function isoDate(dayOffset = 0) {
   const date = new Date();
-  date.setHours(12, 0, 0, 0);
   date.setDate(date.getDate() + dayOffset);
-  return date.toISOString().slice(0, 10);
+  return NamaaCore.localDate(date);
 }
 
 function earlierThisMonth(day) {
@@ -167,12 +156,14 @@ function createDefaultState() {
     language: navigator.language?.toLowerCase().startsWith("ar") ? "ar" : "en",
     currency: "JOD",
     privacyMode: false,
-    preferences: { monthlyReminder: true },
+    preferences: { monthlyReminder: true, autoLockMinutes: 5, lockOnHide: true, theme: "light" },
     accounts: [],
     transactions: [],
     budgets: [],
     goals: [],
-    vaultNotes: []
+    vaultNotes: [],
+    transfers: [],
+    bills: []
   };
 }
 
@@ -194,28 +185,25 @@ function isPristineLegacyDemo(data) {
 }
 
 function loadState() {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return createDefaultState();
-    const parsed = JSON.parse(raw);
-    if (!parsed || typeof parsed !== "object" || !Array.isArray(parsed.transactions)) return createDefaultState();
-    if (isPristineLegacyDemo(parsed)) return createDefaultState();
-    return {
-      ...createDefaultState(),
-      ...parsed,
-      profile: { ...createDefaultState().profile, ...(parsed.profile || {}) },
-      preferences: { ...createDefaultState().preferences, ...(parsed.preferences || {}) },
-      accounts: Array.isArray(parsed.accounts) ? parsed.accounts : [],
-      budgets: Array.isArray(parsed.budgets) ? parsed.budgets : [],
-      goals: Array.isArray(parsed.goals) ? parsed.goals : [],
-      vaultNotes: Array.isArray(parsed.vaultNotes) ? parsed.vaultNotes : []
-    };
-  } catch {
-    return createDefaultState();
-  }
+  const loaded = vaultStore.load();
+  if (loaded && (!Array.isArray(loaded.accounts) || !Array.isArray(loaded.transactions))) throw new Error("INVALID_DATA");
+  // Preserve all saved records, including older demo workspaces, during upgrade.
+  return loaded ? NamaaCore.normalize(loaded, createDefaultState()) : createDefaultState();
 }
 
-let state = loadState();
+const vaultStore = new NamaaCrypto.Store(localStorage, STORAGE_KEY);
+let state = createDefaultState();
+let workspaceLocked = true;
+let uiBusy = false;
+let pendingSave = Promise.resolve();
+let lockPromise = Promise.resolve();
+let lastActivity = Date.now();
+let pendingBackup = null;
+let lastModalFocus = null;
+let transactionAccount = "";
+let transactionCategory = "";
+let transactionFrom = "";
+let transactionTo = "";
 let currentPage = "dashboard";
 let transactionFilter = "all";
 let transactionSearch = "";
@@ -228,19 +216,18 @@ function profileDisplayName() {
   return state.profile.name || t("personalWorkspace");
 }
 
-function saveState() {
-  state.version = APP_VERSION;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  scheduleBackupWrite();
-  maybeNudgeBackup();
+async function saveState() {
+  if (workspaceLocked) throw new Error("VAULT_LOCKED");
+  state = NamaaCore.normalize(state, createDefaultState());
+  const snapshot = structuredClone(state);
+  setSaveStatus("saving");
+  pendingSave = vaultStore.save(snapshot);
+  await pendingSave;
+  setSaveStatus("saved");
 }
 
 function t(key) {
   return I18N[state.language]?.[key] ?? I18N.en[key] ?? key;
-}
-
-function tf(key, vars = {}) {
-  return String(t(key)).replace(/\{(\w+)\}/g, (_, name) => (name in vars ? String(vars[name]) : `{${name}}`));
 }
 
 function langValue(object) {
@@ -286,9 +273,9 @@ function currencySymbol() {
 }
 
 function money(value, signed = false) {
-  const abs = Math.abs(Number(value) || 0);
-  const number = new Intl.NumberFormat(getLocale(), { minimumFractionDigits: 0, maximumFractionDigits: 2 }).format(abs);
-  const sign = signed && value > 0 ? "+" : signed && value < 0 ? "−" : "";
+  const digits = state.currency === "JOD" ? 3 : 2;
+  const number = new Intl.NumberFormat(getLocale(), { minimumFractionDigits: digits, maximumFractionDigits: digits }).format(Math.abs(Number(value) || 0));
+  const sign = Number(value) < 0 ? "−" : signed && Number(value) > 0 ? "+" : "";
   return state.language === "ar" ? `${sign}${number} ${currencySymbol()}` : `${sign}${currencySymbol()} ${number}`;
 }
 
@@ -312,25 +299,19 @@ function monthTransactions() {
 }
 
 function sumTransactions(list, type) {
-  return list.filter((tx) => tx.type === type).reduce((sum, tx) => sum + Number(tx.amount || 0), 0);
+  return NamaaCore.sum(list.filter(tx => tx.type === type).map(tx => tx.amount));
 }
 
 function accountBalance(accountId) {
-  const account = state.accounts.find((item) => item.id === accountId);
-  const opening = Number(account?.openingBalance || 0);
-  return opening + state.transactions
-    .filter((tx) => tx.accountId === accountId)
-    .reduce((sum, tx) => sum + (tx.type === "income" ? Number(tx.amount) : -Number(tx.amount)), 0);
+  return NamaaCore.balance(state, accountId);
 }
 
 function totalBalance() {
-  return state.accounts.reduce((sum, account) => sum + accountBalance(account.id), 0);
+  return NamaaCore.sum(state.accounts.map(account => accountBalance(account.id)));
 }
 
 function budgetSpend(category) {
-  return monthTransactions()
-    .filter((tx) => tx.type === "expense" && tx.category === category)
-    .reduce((sum, tx) => sum + Number(tx.amount), 0);
+  return sumTransactions(monthTransactions().filter(tx => tx.category === category), "expense");
 }
 
 function transactionIconClass(tx) {
@@ -347,23 +328,20 @@ function sortedTransactions() {
 
 function monthIncome() { return sumTransactions(monthTransactions(), "income"); }
 function monthExpense() { return sumTransactions(monthTransactions(), "expense"); }
-function monthSaved() { return monthIncome() - monthExpense(); }
+function monthSaved() { return NamaaCore.sum([monthIncome(), -monthExpense()]); }
 
 function spentByCategory() {
   const map = {};
   monthTransactions().filter((tx) => tx.type === "expense").forEach((tx) => {
-    map[tx.category] = (map[tx.category] || 0) + Number(tx.amount);
+    map[tx.category] = NamaaCore.sum([map[tx.category] || 0, tx.amount]);
   });
   return Object.entries(map).sort((a, b) => b[1] - a[1]);
 }
 
 function getUpcoming() {
-  const recurring = state.transactions.filter((tx) => tx.recurring);
-  return recurring.map((tx) => {
-    const original = new Date(`${tx.date}T12:00:00`);
-    const dueDate = nextDateWithDay(original.getDate());
-    return { ...tx, dueDate };
-  }).sort((a, b) => a.dueDate.localeCompare(b.dueDate)).slice(0, 4);
+  const scheduled = state.bills.filter(x => x.active !== false).map(x => ({ ...x, description: x.name, dueDate: x.nextDue, type: "expense" }));
+  const recurring = state.transactions.filter(tx => tx.recurring).map(tx => ({ ...tx, dueDate: NamaaCore.upcoming(tx, isoDate()) }));
+  return [...scheduled, ...recurring].sort((a, b) => a.dueDate.localeCompare(b.dueDate)).slice(0, 4);
 }
 
 function percentage(value, max) {
@@ -376,8 +354,9 @@ function friendlyDayDifference(dateString) {
   today.setHours(0, 0, 0, 0);
   const target = new Date(`${dateString}T00:00:00`);
   const days = Math.round((target - today) / 86400000);
+  if (state.language === "ar" && days < 0) return `متأخر ${Math.abs(days)} أيام`;
   if (state.language === "ar") return days === 0 ? "اليوم" : days === 1 ? "غداً" : `بعد ${days} أيام`;
-  return days === 0 ? "Today" : days === 1 ? "Tomorrow" : `In ${days} days`;
+  return days < 0 ? `${Math.abs(days)} days overdue` : days === 0 ? "Today" : days === 1 ? "Tomorrow" : `In ${days} days`;
 }
 
 function renderIcons(scope = document) {
@@ -392,6 +371,7 @@ function renderIcons(scope = document) {
 
 function applyLanguage() {
   const html = document.documentElement;
+  html.dataset.theme = state.preferences.theme;
   html.lang = state.language;
   html.dir = state.language === "ar" ? "rtl" : "ltr";
   document.title = t("appName");
@@ -410,7 +390,7 @@ function applyLanguage() {
 
 const NAV_ITEMS = [
   ["dashboard", "dashboard"], ["transactions", "transactions"], ["budgets", "budget"], ["goals", "target"],
-  ["accounts", "wallet"], ["reports", "chart"], ["vault", "vault"], ["settings", "settings"]
+  ["accounts", "wallet"], ["transfers", "repeat"], ["bills", "calendar"], ["reports", "chart"], ["vault", "vault"], ["settings", "settings"]
 ];
 
 function navButton(page, iconName, compact = false) {
@@ -434,7 +414,9 @@ function pageMeta(page) {
     accounts: [t("overview"), t("accounts")],
     reports: [monthLabel(), t("reports")],
     vault: [t("privateOnDevice"), t("vault")],
-    settings: [t("personalWorkspace"), t("settings")]
+    settings: [t("personalWorkspace"), t("settings")],
+    bills: [t("personalWorkspace"), t("bills")],
+    transfers: [t("personalWorkspace"), t("transfers")]
   };
   return meta[page] || meta.dashboard;
 }
@@ -469,13 +451,13 @@ function renderOnboarding() {
         <span><b>3</b>${esc(t("stepPlan"))}</span>
       </div>
       <button class="primary-button onboarding-action" type="button" data-action="add-account">${icon("plus")}<span>${esc(t("startFirstAccount"))}</span></button>
-      <button class="quiet-button onboarding-restore" type="button" data-action="onboarding-restore">${icon("upload")}<span>${esc(t("restoreFromFile"))}</span></button>
+      <a class="onboarding-policy-link" href="privacy.html">${esc(t("privacyPolicy"))}</a>
     </article>
   </section>`;
 }
 
 function renderDashboard() {
-  if (isNewWorkspace()) return renderOnboarding();
+  if (isNewWorkspace()) return renderSecurityBanner() + renderOnboarding();
   const income = monthIncome();
   const expense = monthExpense();
   const saved = monthSaved();
@@ -484,7 +466,7 @@ function renderDashboard() {
   const budgets = state.budgets.slice(0, 4);
   const upcoming = getUpcoming();
   return `
-    ${renderBudgetAlerts()}
+    ${renderSecurityBanner()}
     <section class="dashboard-top">
       <div>
         <h2>${esc(greeting())}</h2>
@@ -502,19 +484,19 @@ function renderDashboard() {
         <span class="metric-icon">${icon("arrowUp")}</span>
         <p class="card-kicker">${esc(t("incomeThisMonth"))}</p>
         <p class="metric-amount ${visibilityClass()}">${money(income)}</p>
-        <p class="metric-detail positive">${icon("trendUp")}<span>+12.4% ${esc(t("fromLastMonth"))}</span></p>
+        <p class="metric-detail positive">${icon("trendUp")}<span>${esc(monthComparison("income"))}</span></p>
       </article>
       <article class="summary-card">
         <span class="metric-icon expense">${icon("arrowDown")}</span>
         <p class="card-kicker">${esc(t("expenseThisMonth"))}</p>
         <p class="metric-amount ${visibilityClass()}">${money(expense)}</p>
-        <p class="metric-detail negative">${icon("trendDown")}<span>−5.8% ${esc(t("fromLastMonth"))}</span></p>
+        <p class="metric-detail negative">${icon("trendDown")}<span>${esc(monthComparison("expense"))}</span></p>
       </article>
       <article class="summary-card">
         <span class="metric-icon saved">${icon("target")}</span>
         <p class="card-kicker">${esc(t("savedThisMonth"))}</p>
         <p class="metric-amount ${visibilityClass()}">${money(saved)}</p>
-        <p class="metric-detail ${saved >= 0 ? "positive" : "negative"}">${icon(saved >= 0 ? "trendUp" : "trendDown")}<span>${saved >= 0 ? "18.6%" : "0%"} ${esc(t("ofIncomeSaved"))}</span></p>
+        <p class="metric-detail ${saved >= 0 ? "positive" : "negative"}">${icon(saved >= 0 ? "trendUp" : "trendDown")}<span>${income ? Math.round(saved / income * 100) : 0}% ${esc(t("ofIncomeSaved"))}</span></p>
       </article>
     </section>
     <section class="dashboard-grid">
@@ -567,6 +549,7 @@ function renderCashFlowPanel() {
   const labels = [];
   for (let index = 5; index >= 0; index -= 1) {
     const date = new Date();
+    date.setDate(1);
     date.setMonth(date.getMonth() - index);
     const year = date.getFullYear();
     const month = date.getMonth();
@@ -608,19 +591,20 @@ function renderTransactionListItem(tx) {
 
 function renderBudgetListItem(budget) {
   const spent = budgetSpend(budget.category);
-  const ratio = percentage(spent, budget.limit);
+  const ratio = Math.round(spent / budget.limit * 100);
   const status = ratio > 100 ? "over" : ratio > 78 ? "warn" : "";
   return `<div class="budget-item">
     <div class="budget-label"><span>${esc(categoryLabel(budget.category))}</span><small class="${visibilityClass()}">${money(spent)} ${esc(t("of"))} ${money(budget.limit)}</small></div>
-    <div class="progress-track"><div class="progress-bar ${status}" style="width:${ratio}%"></div></div>
-    <div class="budget-foot"><span>${ratio}% ${esc(t("spent"))}</span><span class="${visibilityClass()}">${money(Math.max(budget.limit - spent, 0))} ${esc(t("remaining"))}</span></div>
+    <div class="progress-track"><div class="progress-bar ${status}" style="width:${Math.min(100, ratio)}%"></div></div>
+    <div class="budget-foot"><span>${ratio}% ${esc(t("spent"))}</span><span class="${visibilityClass()}">${money(Math.max(NamaaCore.sum([budget.limit, -spent]), 0))} ${esc(t("remaining"))}</span></div>
   </div>`;
 }
 
 function renderSpendingDonut() {
-  const categories = spentByCategory().slice(0, 4);
+  const allCategories = spentByCategory();
+  const categories = allCategories.length > 4 ? [...allCategories.slice(0, 3), ["otherExpenseGroups", NamaaCore.sum(allCategories.slice(3).map(([,value]) => value))]] : allCategories;
   const colors = ["#f2ad43", "#e77474", "#8f7add", "#54a3e6"];
-  const total = categories.reduce((sum, [, value]) => sum + value, 0);
+  const total = NamaaCore.sum(categories.map(([,value]) => value));
   let start = 0;
   const segments = categories.map(([id, value], index) => {
     const end = start + (total ? (value / total) * 100 : 0);
@@ -631,18 +615,16 @@ function renderSpendingDonut() {
   const style = segments.length ? `background:conic-gradient(${segments.join(",")})` : "background:#e8eff4";
   return `<div class="spending-summary">
     <div class="donut" style="${style}"><span class="${visibilityClass()}">${money(total)}</span></div>
-    <div class="spending-key">${categories.length ? categories.map(([id, value], index) => `<div class="spending-key-row"><i class="category-dot" style="background:${colors[index]}"></i><span>${esc(categoryLabel(id))}</span><strong class="${visibilityClass()}">${money(value)}</strong></div>`).join("") : `<span class="subtext">${esc(t("noTransactions"))}</span>`}</div>
+    <div class="spending-key">${categories.length ? categories.map(([id, value], index) => `<div class="spending-key-row"><i class="category-dot" style="background:${colors[index]}"></i><span>${esc(id === "otherExpenseGroups" ? t("other") : categoryLabel(id))}</span><strong class="${visibilityClass()}">${money(value)}</strong></div>`).join("") : `<span class="subtext">${esc(t("noTransactions"))}</span>`}</div>
   </div>`;
 }
 
 function renderUpcomingItem(item) {
   const due = new Date(`${item.dueDate}T12:00:00`);
-  const dueSoon = item.dueDate <= isoDate();
-  return `<div class="upcoming-item has-action ${dueSoon ? "due" : ""}">
+  return `<div class="upcoming-item">
     <span class="due-day">${new Intl.DateTimeFormat(getLocale(), { day: "numeric" }).format(due)}</span>
-    <span class="upcoming-copy"><strong>${esc(item.description)}</strong><small>${esc(dueSoon ? t("dueToday") : friendlyDayDifference(item.dueDate))} · ${esc(t(item.frequency || "monthly"))}</small></span>
+    <span class="upcoming-copy"><strong>${esc(item.description)}</strong><small>${esc(friendlyDayDifference(item.dueDate))} · ${esc(t(item.frequency || "monthly"))}</small></span>
     <span class="upcoming-amount ${visibilityClass()}">${money(item.amount)}</span>
-    <button class="record-button" type="button" data-action="record-recurring" data-id="${esc(item.id)}" title="${esc(t("recordNow"))}">${icon("check")}<span>${esc(t("recordNow"))}</span></button>
   </div>`;
 }
 
@@ -654,6 +636,10 @@ function renderTransactionsPage() {
   const term = transactionSearch.trim().toLowerCase();
   const records = sortedTransactions().filter((tx) => {
     const matchesType = transactionFilter === "all" || tx.type === transactionFilter;
+    if (transactionAccount && tx.accountId !== transactionAccount) return false;
+    if (transactionCategory && tx.category !== transactionCategory) return false;
+    if (transactionFrom && tx.date < transactionFrom) return false;
+    if (transactionTo && tx.date > transactionTo) return false;
     const haystack = `${tx.description} ${categoryLabel(tx.category)} ${tx.note || ""}`.toLowerCase();
     return matchesType && (!term || haystack.includes(term));
   });
@@ -670,6 +656,7 @@ function renderTransactionsPage() {
       <span class="toolbar-spacer"></span>
       <button class="secondary-button" type="button" data-action="export-csv">${icon("download")}<span>${esc(t("downloadCsv"))}</span></button>
     </section>
+    ${renderTransactionFilters(records.length)}
     <section class="data-table-wrap">
       ${records.length ? `<table class="data-table"><thead><tr><th>${esc(t("description"))}</th><th>${esc(t("category"))}</th><th>${esc(t("account"))}</th><th>${esc(t("date"))}</th><th>${esc(t("type"))}</th><th>${esc(t("amount"))}</th><th><span class="visually-hidden">${esc(t("actions"))}</span></th></tr></thead><tbody>${records.map(renderTransactionTableRow).join("")}</tbody></table>` : renderFullEmpty(t("noTransactions"), t("noTransactionsDetail"), "receipt", "add-transaction", t("addTransaction"))}
     </section>`;
@@ -685,7 +672,7 @@ function renderTransactionTableRow(tx) {
     <td>${esc(dateLabel(tx.date, { day: "numeric", month: "short", year: "numeric" }))}</td>
     <td><span class="pill ${typeClass}">${esc(tx.type === "income" ? t("income") : t("expense"))}${tx.recurring ? ` · ${esc(t("recurring"))}` : ""}</span></td>
     <td class="table-amount ${typeClass} ${visibilityClass()}">${money(tx.type === "income" ? tx.amount : -tx.amount, true)}</td>
-    <td><span class="row-actions"><button class="row-action" type="button" data-action="edit-transaction" data-id="${esc(tx.id)}" aria-label="${esc(t("edit"))}">${icon("edit")}</button><button class="row-action" type="button" data-action="duplicate-transaction" data-id="${esc(tx.id)}" aria-label="${esc(t("duplicate"))}" title="${esc(t("duplicate"))}">${icon("copy")}</button><button class="row-action delete" type="button" data-action="delete-transaction" data-id="${esc(tx.id)}" aria-label="${esc(t("delete"))}">${icon("trash")}</button></span></td>
+    <td><span class="row-actions"><button class="row-action" type="button" data-action="duplicate-transaction" data-id="${esc(tx.id)}" aria-label="${esc(t("duplicate"))}">${icon("copy")}</button><button class="row-action" type="button" data-action="edit-transaction" data-id="${esc(tx.id)}" aria-label="${esc(t("edit"))}">${icon("edit")}</button><button class="row-action delete" type="button" data-action="delete-transaction" data-id="${esc(tx.id)}" aria-label="${esc(t("delete"))}">${icon("trash")}</button></span></td>
   </tr>`;
 }
 
@@ -701,15 +688,15 @@ function renderBudgetsPage() {
 
 function renderBudgetCard(budget) {
   const spend = budgetSpend(budget.category);
-  const progress = percentage(spend, budget.limit);
+  const progress = Math.round(spend / budget.limit * 100);
   const status = progress > 100 ? "over" : progress > 78 ? "warn" : "";
   const meta = CATEGORY_META[budget.category] || CATEGORY_META.otherExpense;
   return `<article class="budget-card">
     <div class="budget-card-top"><span class="category-icon ${esc(meta.color || "green")}">${icon(meta.icon)}</span><button class="more-button" type="button" data-action="delete-budget" data-id="${esc(budget.id)}" aria-label="${esc(t("delete"))}">${icon("trash")}</button></div>
     <h3>${esc(categoryLabel(budget.category))}</h3><p>${esc(monthLabel())}</p>
     <div class="budget-amount-row"><span class="${visibilityClass()}">${money(spend)}</span><small class="${visibilityClass()}">${money(budget.limit)}</small></div>
-    <div class="progress-track"><div class="progress-bar ${status}" style="width:${progress}%"></div></div>
-    <div class="budget-card-foot"><span>${progress}% ${esc(t("spent"))}</span><span class="${visibilityClass()}">${money(Math.max(budget.limit - spend, 0))} ${esc(t("remaining"))}</span></div>
+    <div class="progress-track"><div class="progress-bar ${status}" style="width:${Math.min(100, progress)}%"></div></div>
+    <div class="budget-card-foot"><span>${progress}% ${esc(t("spent"))}</span><span class="${visibilityClass()}">${money(Math.max(NamaaCore.sum([budget.limit, -spend]), 0))} ${esc(t("remaining"))}</span></div>
   </article>`;
 }
 
@@ -728,7 +715,7 @@ function renderGoalCard(goal) {
   return `<article class="goal-card">
     <div class="goal-card-top"><span class="goal-icon ${esc(goal.color || "green")}">${icon(goal.icon || "target")}</span><button class="more-button" type="button" data-action="delete-goal" data-id="${esc(goal.id)}" aria-label="${esc(t("delete"))}">${icon("trash")}</button></div>
     <h3>${esc(goal.name)}</h3><p class="goal-date">${icon("calendar")}<span>${esc(t("due"))} ${esc(dateLabel(goal.dueDate, { month: "short", year: "numeric" }))}</span></p>
-    <div class="goal-bottom"><div class="goal-amount-row"><span class="${visibilityClass()}">${money(goal.saved)}</span><small class="${visibilityClass()}">${money(goal.target)}</small></div><div class="progress-track"><div class="progress-bar" style="width:${progress}%"></div></div><div class="goal-card-foot"><span>${progress}% ${esc(t("contributed"))}</span><button class="quiet-button" type="button" data-action="contribute-goal" data-id="${esc(goal.id)}">${icon("plus")}${esc(t("contribute"))}</button></div></div>
+    <div class="goal-bottom"><div class="goal-amount-row"><span class="${visibilityClass()}">${money(goal.saved)}</span><small class="${visibilityClass()}">${money(goal.target)}</small></div><div class="progress-track"><div class="progress-bar" style="width:${Math.min(100, progress)}%"></div></div><div class="goal-card-foot"><span>${progress}% ${esc(t("contributed"))}</span><button class="quiet-button" type="button" data-action="contribute-goal" data-id="${esc(goal.id)}">${icon("plus")}${esc(t("contribute"))}</button></div></div>
   </article>`;
 }
 
@@ -758,22 +745,22 @@ function renderReportsPage() {
   const income = monthIncome();
   const expense = monthExpense();
   const saved = monthSaved();
-  const budgetsTotal = state.budgets.reduce((sum, budget) => sum + Number(budget.limit), 0);
-  const usedBudgets = state.budgets.reduce((sum, budget) => sum + budgetSpend(budget.category), 0);
+  const budgetsTotal = NamaaCore.sum(state.budgets.map(budget => budget.limit));
+  const usedBudgets = NamaaCore.sum(state.budgets.map(budget => budgetSpend(budget.category)));
   const categories = spentByCategory().slice(0, 5);
   return `
     <section class="page-heading-row">
       <div><h2>${esc(t("reports"))}</h2><p>${esc(t("manageReports"))}</p></div>
-      <div class="heading-actions"><button class="secondary-button" type="button" data-action="print-report">${icon("file")}<span>${esc(t("printReport"))}</span></button><button class="secondary-button" type="button" data-action="export-csv">${icon("download")}<span>${esc(t("downloadCsv"))}</span></button></div>
+      <button class="secondary-button" type="button" data-action="export-csv">${icon("download")}<span>${esc(t("downloadCsv"))}</span></button>
     </section>
     <section class="reports-grid">
       <div class="stack">
-        <article class="report-highlight"><p>${esc(t("monthlySnapshot"))} · ${esc(monthLabel())}</p><h3>${esc(t(state.transactions.length ? "healthyPace" : "reportEmpty"))}</h3><div class="highlight-row"><span class="highlight-stat"><strong class="${visibilityClass()}">${money(saved)}</strong><span>${esc(t("savedThisMonth"))}</span></span><span class="highlight-stat"><strong>${income ? Math.max(0, Math.round((saved / income) * 100)) : 0}%</strong><span>${esc(t("ofIncomeSaved"))}</span></span><span class="highlight-stat"><strong>${budgetsTotal ? Math.min(100, Math.round((usedBudgets / budgetsTotal) * 100)) : 0}%</strong><span>${esc(t("plannedBudget"))}</span></span></div>${monthComparisonText() ? `<p class="highlight-compare">${icon("trendUp")}${esc(monthComparisonText())}</p>` : ""}</article>
+        <article class="report-highlight"><p>${esc(t("monthlySnapshot"))} · ${esc(monthLabel())}</p><h3>${esc(t(monthTransactions().length ? (saved >= 0 ? "surplusMonth" : "deficitMonth") : "reportEmpty"))}</h3><div class="highlight-row"><span class="highlight-stat"><strong class="${visibilityClass()}">${money(saved)}</strong><span>${esc(t("savedThisMonth"))}</span></span><span class="highlight-stat"><strong>${income ? Math.round((saved / income) * 100) : 0}%</strong><span>${esc(t("ofIncomeSaved"))}</span></span><span class="highlight-stat"><strong>${budgetsTotal ? Math.round((usedBudgets / budgetsTotal) * 100) : 0}%</strong><span>${esc(t("plannedBudget"))}</span></span></div></article>
         ${renderCashFlowPanel()}
       </div>
       <div class="stack">
         <article class="panel"><div class="panel-heading"><div><h3>${esc(t("incomeVsExpenses"))}</h3><p>${esc(t("thisMonth"))}</p></div></div><div class="report-list"><div class="report-list-item"><span class="report-list-icon">${icon("arrowUp")}</span><span class="report-list-copy"><strong>${esc(t("income"))}</strong><small>${esc(monthLabel())}</small></span><strong class="positive ${visibilityClass()}">${money(income)}</strong></div><div class="report-list-item"><span class="report-list-icon" style="color:#c95454;background:#ffeded">${icon("arrowDown")}</span><span class="report-list-copy"><strong>${esc(t("expense"))}</strong><small>${esc(monthLabel())}</small></span><strong class="negative ${visibilityClass()}">${money(expense)}</strong></div><div class="report-list-item"><span class="report-list-icon" style="color:#986317;background:#fff5df">${icon("target")}</span><span class="report-list-copy"><strong>${esc(t("savedThisMonth"))}</strong><small>${esc(t("incomeVsExpenses"))}</small></span><strong class="${saved >= 0 ? "positive" : "negative"} ${visibilityClass()}">${money(saved)}</strong></div></div></article>
-        <article class="panel"><div class="panel-heading"><div><h3>${esc(t("topCategories"))}</h3><p>${esc(t("categoryBreakdown"))}</p></div></div><div class="report-list">${categories.length ? categories.map(([category, value]) => `<div class="report-list-item"><span class="report-list-icon" style="color:${categoryColor(category)};background:${categoryPale(category)}">${icon(CATEGORY_META[category]?.icon || "receipt")}</span><span class="report-list-copy"><strong>${esc(categoryLabel(category))}</strong><small>${Math.round((value / Math.max(expense, 1)) * 100)}% ${esc(t("of"))} ${esc(t("expenseThisMonth")).toLowerCase()}</small></span><strong class="${visibilityClass()}">${money(value)}</strong></div>`).join("") : renderEmptyMini(t("noTransactions"), "chart")}</div></article>
+        <article class="panel"><div class="panel-heading"><div><h3>${esc(t("topCategories"))}</h3><p>${esc(t("categoryBreakdown"))}</p></div></div><div class="report-list">${categories.length ? categories.map(([category, value]) => `<div class="report-list-item"><span class="report-list-icon" style="color:${categoryColor(category)};background:${categoryPale(category)}">${icon(CATEGORY_META[category]?.icon || "receipt")}</span><span class="report-list-copy"><strong>${esc(categoryLabel(category))}</strong><small>${Math.round((value / (expense || 1)) * 100)}% ${esc(t("of"))} ${esc(t("expenseThisMonth")).toLowerCase()}</small></span><strong class="${visibilityClass()}">${money(value)}</strong></div>`).join("") : renderEmptyMini(t("noTransactions"), "chart")}</div></article>
       </div>
     </section>`;
 }
@@ -815,10 +802,8 @@ function renderSettingsPage() {
         <div class="setting-row"><span class="setting-icon">${icon("globe")}</span><span class="setting-copy"><strong>${esc(t("language"))}</strong><small>${esc(t("languageDetail"))}</small></span><select class="select-control" data-setting="language" aria-label="${esc(t("language"))}"><option value="en" ${state.language === "en" ? "selected" : ""}>English</option><option value="ar" ${state.language === "ar" ? "selected" : ""}>العربية</option></select></div>
         <div class="setting-row"><span class="setting-icon file">${icon("wallet")}</span><span class="setting-copy"><strong>${esc(t("currency"))}</strong><small>${esc(t("currencyDetail"))}</small></span><select class="select-control" data-setting="currency" aria-label="${esc(t("currency"))}">${["JOD", "USD", "EUR", "GBP", "AED", "SAR"].map((cur) => `<option value="${cur}" ${state.currency === cur ? "selected" : ""}>${cur}</option>`).join("")}</select></div>
         <div class="setting-row"><span class="setting-icon">${icon("bell")}</span><span class="setting-copy"><strong>${esc(t("reminders"))}</strong><small>${esc(t("remindersDetail"))}</small></span><button class="switch ${state.preferences.monthlyReminder ? "on" : ""}" type="button" data-action="toggle-reminder" role="switch" aria-checked="${state.preferences.monthlyReminder}"></button></div>
-        <div class="setting-row"><span class="setting-icon lock">${icon("lock")}</span><span class="setting-copy"><strong>${esc(t("appLock"))}</strong><small>${esc(t("appLockDetail"))}</small></span><button class="switch ${lockRecord() ? "on" : ""}" type="button" data-action="toggle-lock" role="switch" aria-checked="${Boolean(lockRecord())}" aria-label="${esc(t("appLock"))}"></button></div>
-        ${backupSupported ? `<div class="setting-row"><span class="setting-icon">${icon("shield")}</span><span class="setting-copy"><strong>${esc(t("autoBackup"))}</strong><small id="autoBackupStatus">${esc(backupStatusText())}</small></span><span class="setting-actions">${backup.handle ? `<button class="secondary-button" type="button" data-action="backup-change">${esc(t("protectChange"))}</button><button class="quiet-button" type="button" data-action="backup-off">${esc(t("protectTurnOff"))}</button>` : `<button class="primary-button" type="button" data-action="backup-on">${icon("shield")}<span>${esc(t("protectTurnOn"))}</span></button>`}</span></div>` : ""}
         <div class="setting-row"><span class="setting-icon file">${icon("download")}</span><span class="setting-copy"><strong>${esc(t("dataBackup"))}</strong><small>${esc(t("dataBackupDetail"))}</small></span><button class="secondary-button" type="button" data-action="open-backup">${esc(t("exportBackup"))}</button></div>
-      </div><div class="settings-note">${icon("info")} ${esc(t("whereData"))}</div><div class="settings-note about-note"><span>${esc(t("aboutApp"))} · ${esc(t("versionLabel"))} ${APP_VERSION_LABEL}</span><a href="mailto:${esc(SUPPORT_EMAIL)}?subject=${encodeURIComponent("Namaa Finance " + APP_VERSION_LABEL)}">${esc(t("contactDeveloper"))}</a><a href="privacy.html" target="_blank" rel="noopener">${esc(t("privacyPolicy"))}</a></div></article>
+      </div><div class="settings-note">${icon("info")} ${esc(t("deviceOnlyDetail"))}</div></article>
       <aside class="security-card"><div class="security-head"><span class="security-emblem">${icon("shield")}</span><div><h3>${esc(t("deviceOnly"))}</h3><p>${esc(t("dataBackupDetail"))}</p></div></div><ul><li>${icon("check")}<span>${esc(t("privateOnDevice"))}</span></li><li>${icon("check")}<span>${esc(t("exportBackup"))}</span></li><li>${icon("check")}<span>${esc(t("exportCsv"))}</span></li></ul><button class="secondary-button" type="button" data-action="open-backup">${icon("shield")}<span>${esc(t("viewSettings"))}</span></button></aside>
     </section>`;
 }
@@ -829,6 +814,8 @@ function renderFullEmpty(title, detail, iconName, action, actionText) {
 
 function renderContent() {
   const views = {
+    bills: renderBillsPage,
+    transfers: renderTransfersPage,
     dashboard: renderDashboard,
     transactions: renderTransactionsPage,
     budgets: renderBudgetsPage,
@@ -853,8 +840,9 @@ function accountOptions(selected) {
 }
 
 function openModal(content, size = "") {
+  lastModalFocus = document.activeElement;
   const layer = document.getElementById("modalLayer");
-  layer.innerHTML = `<div class="modal-backdrop" data-action="close-modal"></div><section class="modal ${size}" role="dialog" aria-modal="true">${content}</section>`;
+  layer.innerHTML = `<div class="modal-backdrop" data-action="close-modal"></div><section class="modal ${size}" role="dialog" aria-modal="true" aria-labelledby="modalTitle">${content}</section>`;
   layer.classList.add("open");
   renderIcons(layer);
   setTimeout(() => layer.querySelector("[autofocus], input, button")?.focus(), 0);
@@ -864,10 +852,11 @@ function closeModal() {
   const layer = document.getElementById("modalLayer");
   layer.classList.remove("open");
   layer.innerHTML = "";
+  if (!workspaceLocked) lastModalFocus?.focus?.();
 }
 
 function modalHeader(title, detail) {
-  return `<header class="modal-header"><div><h2>${esc(title)}</h2>${detail ? `<p>${esc(detail)}</p>` : ""}</div><button class="close-button" type="button" data-action="close-modal" aria-label="${esc(t("close"))}">${icon("close")}</button></header>`;
+  return `<header class="modal-header"><div><h2 id="modalTitle">${esc(title)}</h2>${detail ? `<p>${esc(detail)}</p>` : ""}</div><button class="close-button" type="button" data-action="close-modal" aria-label="${esc(t("close"))}">${icon("close")}</button></header>`;
 }
 
 function openTransactionModal(defaultType = "expense", record = null) {
@@ -883,7 +872,7 @@ function openTransactionModal(defaultType = "expense", record = null) {
         <div class="field"><label>${esc(t("transactionType"))}</label><div class="segmented" data-transaction-type-chooser><button type="button" class="${type === "expense" ? "active" : ""}" data-action="select-transaction-type" data-type="expense">${icon("arrowDown")} ${esc(t("expenseType"))}</button><button type="button" class="${type === "income" ? "active" : ""}" data-action="select-transaction-type" data-type="income">${icon("arrowUp")} ${esc(t("incomeType"))}</button></div><input type="hidden" name="type" value="${type}" /></div>
         <div class="form-grid" style="margin-top:.92rem">
           <div class="field full"><label for="transaction-description">${esc(t("description"))}</label><input class="input-control" id="transaction-description" name="description" required maxlength="80" value="${esc(record?.description || "")}" placeholder="${esc(t("description"))}" autofocus /></div>
-          <div class="field"><label for="transaction-amount">${esc(t("amount"))}</label><input class="input-control" id="transaction-amount" name="amount" required min="0.01" max="999999999" step="0.01" type="number" inputmode="decimal" value="${record ? esc(record.amount) : ""}" placeholder="0.00" /></div>
+          <div class="field"><label for="transaction-amount">${esc(t("amount"))}</label><input class="input-control" id="transaction-amount" name="amount" required min="${amountStep()}" max="999999999" step="${amountStep()}" type="number" inputmode="decimal" value="${record ? esc(record.amount) : ""}" placeholder="0.00" /></div>
           <div class="field"><label for="transaction-date">${esc(t("date"))}</label><input class="input-control" id="transaction-date" name="date" required type="date" value="${esc(record?.date || isoDate())}" /></div>
           <div class="field"><label for="transaction-category">${esc(t("category"))}</label><select class="select-control" id="transaction-category" name="category">${categoryOptions(type, category)}</select></div>
           <div class="field"><label for="transaction-account">${esc(t("account"))}</label><select class="select-control" id="transaction-account" name="accountId">${accountOptions(record?.accountId || state.accounts[0].id)}</select></div>
@@ -898,25 +887,25 @@ function openTransactionModal(defaultType = "expense", record = null) {
 }
 
 function openBudgetModal() {
-  const content = `${modalHeader(t("addBudgetTitle"), t("addBudgetDetail"))}<form data-form="budget"><div class="modal-body"><div class="form-grid one"><div class="field"><label for="budget-category">${esc(t("budgetName"))}</label><select class="select-control" id="budget-category" name="category">${categoryOptions("expense", "food")}</select></div><div class="field"><label for="budget-limit">${esc(t("monthlyLimit"))}</label><input class="input-control" id="budget-limit" name="limit" required min="0.01" step="0.01" type="number" inputmode="decimal" placeholder="0.00" autofocus /></div></div></div><footer class="modal-footer"><button class="secondary-button" type="button" data-action="close-modal">${esc(t("cancel"))}</button><button class="primary-button" type="submit">${icon("check")}<span>${esc(t("saveBudget"))}</span></button></footer></form>`;
+  const content = `${modalHeader(t("addBudgetTitle"), t("addBudgetDetail"))}<form data-form="budget"><div class="modal-body"><div class="form-grid one"><div class="field"><label for="budget-category">${esc(t("budgetName"))}</label><select class="select-control" id="budget-category" name="category">${categoryOptions("expense", "food")}</select></div><div class="field"><label for="budget-limit">${esc(t("monthlyLimit"))}</label><input class="input-control" id="budget-limit" name="limit" required min="${amountStep()}" step="${amountStep()}" type="number" inputmode="decimal" placeholder="0.00" autofocus /></div></div></div><footer class="modal-footer"><button class="secondary-button" type="button" data-action="close-modal">${esc(t("cancel"))}</button><button class="primary-button" type="submit">${icon("check")}<span>${esc(t("saveBudget"))}</span></button></footer></form>`;
   openModal(content, "small");
 }
 
 function openGoalModal() {
   const targetDefault = new Date();
   targetDefault.setFullYear(targetDefault.getFullYear() + 1);
-  const content = `${modalHeader(t("addGoalTitle"), t("addGoalDetail"))}<form data-form="goal"><div class="modal-body"><div class="form-grid"><div class="field full"><label for="goal-name">${esc(t("goalName"))}</label><input class="input-control" id="goal-name" name="name" required maxlength="70" placeholder="${esc(t("goalName"))}" autofocus /></div><div class="field"><label for="goal-target">${esc(t("targetAmount"))}</label><input class="input-control" id="goal-target" name="target" required min="0.01" step="0.01" type="number" inputmode="decimal" placeholder="0.00" /></div><div class="field"><label for="goal-saved">${esc(t("savedAlready"))}</label><input class="input-control" id="goal-saved" name="saved" min="0" step="0.01" type="number" inputmode="decimal" value="0" /></div><div class="field full"><label for="goal-date">${esc(t("targetDate"))}</label><input class="input-control" id="goal-date" name="dueDate" required type="date" value="${targetDefault.toISOString().slice(0, 10)}" /></div></div></div><footer class="modal-footer"><button class="secondary-button" type="button" data-action="close-modal">${esc(t("cancel"))}</button><button class="primary-button" type="submit">${icon("check")}<span>${esc(t("saveGoal"))}</span></button></footer></form>`;
+  const content = `${modalHeader(t("addGoalTitle"), t("addGoalDetail"))}<form data-form="goal"><div class="modal-body"><div class="form-grid"><div class="field full"><label for="goal-name">${esc(t("goalName"))}</label><input class="input-control" id="goal-name" name="name" required maxlength="70" placeholder="${esc(t("goalName"))}" autofocus /></div><div class="field"><label for="goal-target">${esc(t("targetAmount"))}</label><input class="input-control" id="goal-target" name="target" required min="${amountStep()}" step="${amountStep()}" type="number" inputmode="decimal" placeholder="0.00" /></div><div class="field"><label for="goal-saved">${esc(t("savedAlready"))}</label><input class="input-control" id="goal-saved" name="saved" min="0" step="${amountStep()}" type="number" inputmode="decimal" value="0" /></div><div class="field full"><label for="goal-date">${esc(t("targetDate"))}</label><input class="input-control" id="goal-date" name="dueDate" required type="date" value="${NamaaCore.localDate(targetDefault)}" /></div></div></div><footer class="modal-footer"><button class="secondary-button" type="button" data-action="close-modal">${esc(t("cancel"))}</button><button class="primary-button" type="submit">${icon("check")}<span>${esc(t("saveGoal"))}</span></button></footer></form>`;
   openModal(content, "small");
 }
 
 function openGoalContributionModal(goal) {
   if (!goal) return;
-  const content = `${modalHeader(t("contributeTitle"), t("contributeDetail"))}<form data-form="contribution" data-goal-id="${esc(goal.id)}"><div class="modal-body"><div class="form-grid one"><div class="field"><label>${esc(goal.name)}</label><p class="field-help">${esc(t("contributed"))}: ${money(goal.saved)} · ${esc(t("target"))}: ${money(goal.target)}</p></div><div class="field"><label for="contribution-amount">${esc(t("contributionAmount"))}</label><input class="input-control" id="contribution-amount" name="amount" required min="0.01" step="0.01" type="number" inputmode="decimal" placeholder="0.00" autofocus /></div></div></div><footer class="modal-footer"><button class="secondary-button" type="button" data-action="close-modal">${esc(t("cancel"))}</button><button class="primary-button" type="submit">${icon("check")}<span>${esc(t("saveContribution"))}</span></button></footer></form>`;
+  const content = `${modalHeader(t("contributeTitle"), t("contributeDetail"))}<form data-form="contribution" data-goal-id="${esc(goal.id)}"><div class="modal-body"><div class="form-grid one"><div class="field"><label>${esc(goal.name)}</label><p class="field-help">${esc(t("contributed"))}: ${money(goal.saved)} · ${esc(t("target"))}: ${money(goal.target)}</p></div><div class="field"><label for="contribution-amount">${esc(t("contributionAmount"))}</label><input class="input-control" id="contribution-amount" name="amount" required min="${amountStep()}" step="${amountStep()}" type="number" inputmode="decimal" placeholder="0.00" autofocus /></div></div></div><footer class="modal-footer"><button class="secondary-button" type="button" data-action="close-modal">${esc(t("cancel"))}</button><button class="primary-button" type="submit">${icon("check")}<span>${esc(t("saveContribution"))}</span></button></footer></form>`;
   openModal(content, "small");
 }
 
 function openAccountModal() {
-  const content = `${modalHeader(t("addAccountTitle"), t("addAccountDetail"))}<form data-form="account"><div class="modal-body"><div class="form-grid"><div class="field full"><label for="account-name">${esc(t("accountName"))}</label><input class="input-control" id="account-name" name="name" required maxlength="70" placeholder="${esc(t("accountName"))}" autofocus /></div><div class="field"><label for="account-type">${esc(t("accountType"))}</label><select class="select-control" id="account-type" name="type"><option value="cash">${esc(t("cashAccount"))}</option><option value="bank">${esc(t("bankAccount"))}</option><option value="card">${esc(t("cardAccount"))}</option><option value="savings">${esc(t("savingsAccount"))}</option></select></div><div class="field"><label for="account-opening">${esc(t("openingBalance"))}</label><input class="input-control" id="account-opening" name="openingBalance" required step="0.01" type="number" inputmode="decimal" value="0" /></div></div></div><footer class="modal-footer"><button class="secondary-button" type="button" data-action="close-modal">${esc(t("cancel"))}</button><button class="primary-button" type="submit">${icon("check")}<span>${esc(t("saveAccount"))}</span></button></footer></form>`;
+  const content = `${modalHeader(t("addAccountTitle"), t("addAccountDetail"))}<form data-form="account"><div class="modal-body"><div class="form-grid"><div class="field full"><label for="account-name">${esc(t("accountName"))}</label><input class="input-control" id="account-name" name="name" required maxlength="70" placeholder="${esc(t("accountName"))}" autofocus /></div><div class="field"><label for="account-type">${esc(t("accountType"))}</label><select class="select-control" id="account-type" name="type"><option value="cash">${esc(t("cashAccount"))}</option><option value="bank">${esc(t("bankAccount"))}</option><option value="card">${esc(t("cardAccount"))}</option><option value="savings">${esc(t("savingsAccount"))}</option></select></div><div class="field"><label for="account-opening">${esc(t("openingBalance"))}</label><input class="input-control" id="account-opening" name="openingBalance" required step="${amountStep()}" type="number" inputmode="decimal" value="0" /></div></div></div><footer class="modal-footer"><button class="secondary-button" type="button" data-action="close-modal">${esc(t("cancel"))}</button><button class="primary-button" type="submit">${icon("check")}<span>${esc(t("saveAccount"))}</span></button></footer></form>`;
   openModal(content, "small");
 }
 
@@ -926,10 +915,7 @@ function openRecordModal() {
 }
 
 function openBackupModal() {
-  const auto = !backupSupported ? "" : backup.handle
-    ? `<button class="backup-option protected" type="button" data-action="backup-change"><span class="backup-option-icon">${icon("shield")}</span><span><strong>${esc(t("autoBackup"))}</strong><small id="autoBackupModalStatus">${esc(backupStatusText())}</small></span><span class="option-arrow">${icon("chevron")}</span></button><div class="backup-subrow"><button class="quiet-button" type="button" data-action="backup-off">${esc(t("protectTurnOff"))}</button></div>`
-    : `<button class="backup-option highlight" type="button" data-action="backup-on"><span class="backup-option-icon">${icon("shield")}</span><span><strong>${esc(t("autoBackup"))}</strong><small>${esc(t("autoBackupDetail"))}</small></span><span class="option-arrow">${icon("chevron")}</span></button>`;
-  const content = `${modalHeader(t("backupTitle"), t("backupDetail"))}<div class="modal-body"><div class="backup-options">${auto}<button class="backup-option" type="button" data-action="export-json"><span class="backup-option-icon">${icon("download")}</span><span><strong>${esc(t("downloadBackup"))}</strong><small>${esc(t("downloadBackupDetail"))}</small></span><span class="option-arrow">${icon("chevron")}</span></button><button class="backup-option" type="button" data-action="trigger-import"><span class="backup-option-icon">${icon("upload")}</span><span><strong>${esc(t("importBackup"))}</strong><small>${esc(t("importBackupDetail"))}</small></span><span class="option-arrow">${icon("chevron")}</span></button><input id="backupImport" class="visually-hidden" type="file" accept="application/json,.json" /><button class="backup-option" type="button" data-action="export-csv"><span class="backup-option-icon">${icon("file")}</span><span><strong>${esc(t("downloadTransactions"))}</strong><small>${esc(t("downloadTransactionsDetail"))}</small></span><span class="option-arrow">${icon("chevron")}</span></button></div></div><footer class="modal-footer"><button class="secondary-button" type="button" data-action="close-modal">${esc(t("close"))}</button></footer>`;
+  const content = `${modalHeader(t("backupTitle"), t("backupDetail"))}<div class="modal-body"><div class="backup-options"><button class="backup-option" type="button" data-action="export-json"><span class="backup-option-icon">${icon("download")}</span><span><strong>${esc(t("downloadBackup"))}</strong><small>${esc(t("downloadBackupDetail"))}</small></span><span class="option-arrow">${icon("chevron")}</span></button><button class="backup-option" type="button" data-action="trigger-import"><span class="backup-option-icon">${icon("upload")}</span><span><strong>${esc(t("importBackup"))}</strong><small>${esc(t("importBackupDetail"))}</small></span><span class="option-arrow">${icon("chevron")}</span></button><input id="backupImport" class="visually-hidden" type="file" accept="application/json,.json" /><button class="backup-option" type="button" data-action="export-csv"><span class="backup-option-icon">${icon("file")}</span><span><strong>${esc(t("downloadTransactions"))}</strong><small>${esc(t("downloadTransactionsDetail"))}</small></span><span class="option-arrow">${icon("chevron")}</span></button></div></div><footer class="modal-footer"><button class="secondary-button" type="button" data-action="close-modal">${esc(t("close"))}</button></footer>`;
   openModal(content, "small");
 }
 
@@ -940,6 +926,7 @@ function openMobileNavigation() {
 }
 
 function showToast(title, detail = "", tone = "success") {
+  if (workspaceLocked) return;
   const region = document.getElementById("toastRegion");
   const toast = document.createElement("div");
   toast.className = `toast ${tone === "error" ? "error" : ""}`;
@@ -959,17 +946,18 @@ function downloadFile(filename, contents, mime) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-function exportJson() {
-  const payload = { app: "Namaa Finance", version: APP_VERSION, exportedAt: new Date().toISOString(), data: state };
-  downloadFile(`namaa-finance-backup-${isoDate()}.json`, JSON.stringify(payload, null, 2), "application/json");
-  showToast(t("backupDownloaded"), t("privateOnDevice"));
+async function exportJson() {
+  if (vaultStore.secured) {
+    await pendingSave;
+    downloadFile(`namaa-encrypted-backup-${isoDate()}.json`, await vaultStore.encryptedBackup(), "application/json");
+    showToast(t("backupDownloaded"), t("encryptedBackupDetail"));
+  } else openPasswordModal("backup");
 }
 
-function csvCell(value) {
-  return `"${String(value ?? "").replaceAll('"', '""')}"`;
-}
+function csvCell(value) { return NamaaCore.csvCell(value); }
 
 function exportCsv() {
+  if (!window.confirm(t("plainExportWarning"))) return;
   const rows = [["Date", "Description", "Type", "Category", "Account", "Amount", "Currency", "Recurring", "Note"]];
   sortedTransactions().forEach((tx) => {
     rows.push([tx.date, tx.description, tx.type, categoryLabel(tx.category), accountLabel(state.accounts.find((account) => account.id === tx.accountId)), tx.amount, state.currency, tx.recurring ? "Yes" : "No", tx.note || ""]);
@@ -979,370 +967,14 @@ function exportCsv() {
   showToast(t("csvDownloaded"), t("transactions"));
 }
 
-function parseBackupText(text) {
-  const payload = JSON.parse(String(text || ""));
-  const imported = payload?.data || payload;
-  if (!imported || typeof imported !== "object" || !Array.isArray(imported.transactions) || !Array.isArray(imported.accounts)) throw new Error("invalid");
-  return {
-    ...createDefaultState(),
-    ...imported,
-    profile: { ...createDefaultState().profile, ...(imported.profile || {}) },
-    preferences: { ...createDefaultState().preferences, ...(imported.preferences || {}) },
-    accounts: imported.accounts,
-    transactions: imported.transactions,
-    budgets: Array.isArray(imported.budgets) ? imported.budgets : [],
-    goals: Array.isArray(imported.goals) ? imported.goals : [],
-    vaultNotes: Array.isArray(imported.vaultNotes) ? imported.vaultNotes : []
-  };
-}
-
-function adoptState(next, toastTitle = t("backupRestored")) {
-  state = next;
-  saveState();
-  currentPage = "dashboard";
-  closeModal();
-  renderApp();
-  showToast(toastTitle, t("privateOnDevice"));
-}
-
-function restoreFromFile(file) {
-  const reader = new FileReader();
-  reader.onload = () => {
-    try {
-      const next = parseBackupText(reader.result);
-      if (!isNewWorkspace() && !window.confirm(t("confirmRestore"))) return;
-      adoptState(next);
-    } catch {
-      showToast(t("invalidBackup"), "", "error");
-    }
-  };
-  reader.readAsText(file);
-}
-
-/* ---------- Automatic backup to a file ----------
- * Records live in the browser's site storage, which the browser deletes together with
- * browsing data. With automatic backup on, every change is also written to a file the
- * person chose, and an empty workspace is restored from that file. */
-const backupSupported = typeof window.showSaveFilePicker === "function" && typeof indexedDB !== "undefined";
-const backup = { handle: null, status: "off", lastSaved: 0, writing: false, queued: false, timer: 0, nudged: false };
-const NUDGE_KEY = "namaa-finance-backup-nudge";
-
-function kvDb() {
-  return new Promise((resolve, reject) => {
-    const req = indexedDB.open("namaa-finance-backup", 1);
-    req.onupgradeneeded = () => { req.result.createObjectStore("kv"); };
-    req.onsuccess = () => resolve(req.result);
-    req.onerror = () => reject(req.error);
-  });
-}
-function kvRun(mode, fn) {
-  return kvDb().then((db) => new Promise((resolve, reject) => {
-    const req = fn(db.transaction("kv", mode).objectStore("kv"));
-    req.onsuccess = () => resolve(req.result);
-    req.onerror = () => reject(req.error);
-  }));
-}
-const kvGet = (key) => kvRun("readonly", (store) => store.get(key));
-const kvSet = (key, value) => kvRun("readwrite", (store) => store.put(value, key));
-const kvDelete = (key) => kvRun("readwrite", (store) => store.delete(key));
-
-function backupFileName() { return backup.handle?.name || t("autoBackup"); }
-function backupStatusText() {
-  if (!backupSupported) return t("protectUnsupported");
-  switch (backup.status) {
-    case "on": return tf("protectStatusOn", { name: backupFileName() });
-    case "needs-permission": return tf("protectStatusPaused", { name: backupFileName() });
-    case "error": return t("protectStatusError");
-    default: return t("protectStatusOff");
-  }
-}
-function setBackupStatus(status) {
-  backup.status = status;
-  syncSafetyCard();
-  const line = document.getElementById("autoBackupStatus");
-  if (line) line.textContent = backupStatusText();
-  const modalLine = document.getElementById("autoBackupModalStatus");
-  if (modalLine) modalLine.textContent = backupStatusText();
-}
-function backupBody() { return { app: "Namaa Finance", version: APP_VERSION, savedAt: new Date().toISOString(), data: state }; }
-
-/* Runs from a click, which the file picker requires. */
-async function chooseBackupFile() {
-  if (!backupSupported) return;
-  let handle = null;
-  try {
-    handle = await window.showSaveFilePicker({ suggestedName: "Namaa Finance backup.json", types: [{ description: "Backup file", accept: { "application/json": [".json"] } }] });
-  } catch { return; }
-  backup.handle = handle;
-  backup.lastSaved = 0;
-  try { await kvSet("handle", handle); } catch { /* still works for this session */ }
-  try { localStorage.setItem(NUDGE_KEY, "done"); } catch { /* cosmetic */ }
-  hideNotice();
-  closeModal();
-  setBackupStatus("on");
-  await writeBackup();
-  if (backup.status === "on") showToast(t("protectOn"), backupFileName());
-}
-async function turnBackupOff() {
-  backup.handle = null;
-  backup.lastSaved = 0;
-  try { await kvDelete("handle"); } catch { /* nothing stored */ }
-  hideNotice();
-  closeModal();
-  setBackupStatus("off");
-  renderApp();
-  showToast(t("protectOff"));
-}
-function scheduleBackupWrite(delay = 1200) {
-  if (!backup.handle) return;
-  clearTimeout(backup.timer);
-  backup.timer = setTimeout(writeBackup, delay);
-}
-async function writeBackup() {
-  if (!backup.handle || backup.status === "needs-permission") return;
-  if (backup.writing) { backup.queued = true; return; }
-  backup.writing = true;
-  try {
-    const writable = await backup.handle.createWritable();
-    await writable.write(JSON.stringify(backupBody(), null, 2));
-    await writable.close();
-    backup.lastSaved = Date.now();
-    setBackupStatus("on");
-  } catch (error) {
-    if (error?.name === "NotAllowedError") {
-      setBackupStatus("needs-permission");
-      showNotice(tf("protectStatusPaused", { name: backupFileName() }), t("protectAllow"), "backup-allow");
-    } else {
-      setBackupStatus("error");
-      showNotice(t("protectStatusError"), t("protectChange"), "backup-change");
-    }
-  } finally {
-    backup.writing = false;
-    if (backup.queued) { backup.queued = false; scheduleBackupWrite(300); }
-  }
-}
-async function readBackupHandle() {
-  const file = await backup.handle.getFile();
-  return parseBackupText(await file.text());
-}
-/* If the workspace is empty but the backup file has records, bring them back. */
-async function restoreFromBackupFile() {
-  if (!isNewWorkspace()) return false;
-  let next = null;
-  try { next = await readBackupHandle(); } catch { next = null; }
-  if (!next) return false;
-  const filled = next.accounts.length || next.transactions.length || next.budgets.length || next.goals.length || next.vaultNotes.length;
-  if (!filled) return false;
-  adoptState(next, t("protectRestored"));
-  return true;
-}
-/* Runs from a click, which a permission request requires. */
-async function allowBackupAccess() {
-  if (!backup.handle) return;
-  let permission = "denied";
-  try { permission = await backup.handle.requestPermission({ mode: "readwrite" }); } catch { permission = "denied"; }
-  if (permission !== "granted") return;
-  hideNotice();
-  setBackupStatus("on");
-  const restored = await restoreFromBackupFile();
-  if (!restored) writeBackup();
-}
-async function initBackup() {
-  if (navigator.storage?.persist) navigator.storage.persist().catch(() => {});
-  if (!backupSupported) { syncSafetyCard(); return; }
-  try { backup.handle = (await kvGet("handle")) || null; } catch { backup.handle = null; }
-  if (!backup.handle) { syncSafetyCard(); setTimeout(maybeNudgeBackup, 6000); return; }
-  let permission = "prompt";
-  try { permission = await backup.handle.queryPermission({ mode: "readwrite" }); } catch { permission = "prompt"; }
-  if (permission === "granted") {
-    setBackupStatus("on");
-    await restoreFromBackupFile();
-  } else {
-    setBackupStatus("needs-permission");
-    showNotice(isNewWorkspace() ? t("protectRestoreOffer") : tf("protectStatusPaused", { name: backupFileName() }), t("protectAllow"), "backup-allow");
-  }
-}
-/* After the first records, suggest automatic backup once (again after a week if dismissed). */
-function maybeNudgeBackup() {
-  if (!backupSupported || backup.handle || backup.nudged || isNewWorkspace()) return;
-  let seen = null;
-  try { seen = localStorage.getItem(NUDGE_KEY); } catch { seen = "done"; }
-  if (seen === "done") return;
-  if (seen && Date.now() - Number(seen) < 7 * 86400000) return;
-  backup.nudged = true;
-  showNotice(t("protectNudge"), t("protectTurnOn"), "backup-on");
-}
-/* Restore from a file picked on the welcome screen; with the picker API the file also becomes the backup file. */
-async function restoreFromPickedFile() {
-  if (typeof window.showOpenFilePicker !== "function") { document.getElementById("restoreInput")?.click(); return; }
-  let handle = null;
-  try { [handle] = await window.showOpenFilePicker({ types: [{ description: "Backup file", accept: { "application/json": [".json"] } }], multiple: false }); } catch { return; }
-  try {
-    const next = parseBackupText(await (await handle.getFile()).text());
-    if (!isNewWorkspace() && !window.confirm(t("confirmRestore"))) return;
-    if (backupSupported) {
-      backup.handle = handle;
-      try { await kvSet("handle", handle); } catch { /* session only */ }
-      try { localStorage.setItem(NUDGE_KEY, "done"); } catch { /* cosmetic */ }
-      setBackupStatus("on");
-    }
-    adoptState(next);
-  } catch {
-    showToast(t("invalidBackup"), "", "error");
-  }
-}
-
-/* ---------- Notice bar ---------- */
-function showNotice(text, buttonLabel, action) {
-  const bar = document.getElementById("noticeBar");
-  if (!bar) return;
-  bar.dataset.kind = action || "";
-  bar.innerHTML = `<span class="notice-text">${icon("shield")}<span>${esc(text)}</span></span>${buttonLabel ? `<button class="notice-button" type="button" data-action="${esc(action)}">${esc(buttonLabel)}</button>` : ""}<button class="notice-close" type="button" data-action="notice-close" aria-label="${esc(t("dismiss"))}">${icon("close")}</button>`;
-  bar.hidden = false;
-  renderIcons(bar);
-}
-function hideNotice() {
-  const bar = document.getElementById("noticeBar");
-  if (!bar) return;
-  bar.hidden = true;
-  bar.innerHTML = "";
-  delete bar.dataset.kind;
-}
-/* The sidebar card shows whether the records are protected. */
-function syncSafetyCard() {
-  const card = document.getElementById("openBackup");
-  if (!card) return;
-  const title = card.querySelector("strong");
-  const detail = card.querySelector("small");
-  const protectedNow = backup.status === "on" && backup.handle;
-  card.classList.toggle("protected", Boolean(protectedNow));
-  card.classList.toggle("unprotected", Boolean(backupSupported && !backup.handle && !isNewWorkspace()));
-  if (protectedNow) { title.textContent = t("protectOn"); detail.textContent = backupFileName(); }
-  else if (backupSupported && !backup.handle && !isNewWorkspace()) { title.textContent = t("protectStatusOff"); detail.textContent = t("protectTurnOn") + " · " + t("autoBackup"); }
-  else { title.textContent = t("privateOnDevice"); detail.textContent = t("backupHint"); }
-}
-
-/* ---------- App lock (PIN) ---------- */
-function lockRecord() {
-  try { const raw = localStorage.getItem(LOCK_KEY); return raw ? JSON.parse(raw) : null; } catch { return null; }
-}
-async function hashPin(pin, salt) {
-  const bytes = new TextEncoder().encode(`${salt}:${pin}`);
-  const digest = await crypto.subtle.digest("SHA-256", bytes);
-  return Array.from(new Uint8Array(digest)).map((b) => b.toString(16).padStart(2, "0")).join("");
-}
-function validPin(pin) { return /^\d{4,8}$/.test(pin); }
-async function setPin(pin) {
-  const salt = Array.from(crypto.getRandomValues(new Uint8Array(12))).map((b) => b.toString(16).padStart(2, "0")).join("");
-  localStorage.setItem(LOCK_KEY, JSON.stringify({ salt, hash: await hashPin(pin, salt), setAt: Date.now() }));
-}
-async function verifyPin(pin) {
-  const record = lockRecord();
-  if (!record) return true;
-  return (await hashPin(pin, record.salt)) === record.hash;
-}
-function openPinModal(mode = "set") {
-  const remove = mode === "remove";
-  const content = `${modalHeader(remove ? t("removePinTitle") : t("pinTitle"), remove ? t("removePinDetail") : t("pinDetail"))}
-    <form data-form="pin" data-mode="${remove ? "remove" : "set"}"><div class="modal-body"><div class="form-grid">
-      <div class="field full"><label for="pinField">${esc(t("pin"))}</label><input id="pinField" class="input-control" name="pin" type="password" inputmode="numeric" pattern="[0-9]*" autocomplete="off" minlength="4" maxlength="8" required autofocus /></div>
-      ${remove ? "" : `<div class="field full"><label for="pinConfirm">${esc(t("confirmPin"))}</label><input id="pinConfirm" class="input-control" name="confirm" type="password" inputmode="numeric" pattern="[0-9]*" autocomplete="off" minlength="4" maxlength="8" required /></div>`}
-    </div></div><footer class="modal-footer"><button class="secondary-button" type="button" data-action="close-modal">${esc(t("cancel"))}</button><button class="primary-button" type="submit">${icon("lock")}<span>${esc(remove ? t("removePinTitle") : t("appLock"))}</span></button></footer></form>`;
-  openModal(content, "small");
-}
-async function submitPin(form) {
-  const data = new FormData(form);
-  const pin = String(data.get("pin") || "");
-  if (form.dataset.mode === "remove") {
-    if (!(await verifyPin(pin))) return showToast(t("wrongPin"), "", "error");
-    localStorage.removeItem(LOCK_KEY);
-    closeModal(); renderApp(); showToast(t("pinRemoved"));
-    return;
-  }
-  if (!validPin(pin)) return showToast(t("pinInvalid"), "", "error");
-  if (pin !== String(data.get("confirm") || "")) return showToast(t("pinMismatch"), "", "error");
-  await setPin(pin);
-  closeModal(); renderApp(); showToast(t("pinSet"), t("appLockDetail"));
-}
-function showLockScreen() {
-  if (!lockRecord() || document.getElementById("lockScreen")) return;
-  const screen = document.createElement("div");
-  screen.id = "lockScreen";
-  screen.className = "lock-screen";
-  screen.setAttribute("dir", state.language === "ar" ? "rtl" : "ltr");
-  screen.innerHTML = `<form class="lock-card" data-form="unlock" aria-label="${esc(t("unlockTitle"))}">
-      <div class="lock-mark">${icon("lock")}</div>
-      <h2>${esc(t("appName"))}</h2>
-      <p>${esc(t("unlockTitle"))}</p>
-      <input class="input-control pin-input" name="pin" type="password" inputmode="numeric" pattern="[0-9]*" autocomplete="off" maxlength="8" aria-label="${esc(t("pin"))}" autofocus />
-      <p class="lock-error" id="lockError" hidden>${esc(t("wrongPin"))}</p>
-      <button class="primary-button" type="submit">${icon("lock")}<span>${esc(t("unlock"))}</span></button>
-      <small>${esc(t("forgotPin"))}</small>
-    </form>`;
-  document.body.appendChild(screen);
-  document.getElementById("appShell")?.setAttribute("inert", "");
-  renderIcons(screen);
-  setTimeout(() => screen.querySelector("input")?.focus(), 0);
-}
-async function submitUnlock(form) {
-  const input = form.querySelector("input");
-  const ok = await verifyPin(input.value);
-  if (!ok) {
-    const error = document.getElementById("lockError");
-    if (error) error.hidden = false;
-    form.classList.remove("shake"); void form.offsetWidth; form.classList.add("shake");
-    input.value = ""; input.focus();
-    return;
-  }
-  document.getElementById("lockScreen")?.remove();
-  document.getElementById("appShell")?.removeAttribute("inert");
-}
-let hiddenSince = 0;
-document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === "hidden") { hiddenSince = Date.now(); return; }
-  if (hiddenSince && Date.now() - hiddenSince > LOCK_AFTER_MS) showLockScreen();
-  hiddenSince = 0;
-});
-
-/* ---------- Recurring payments, duplicates, budget alerts, month comparison ---------- */
-function postRecurring(id) {
-  const tx = state.transactions.find((item) => item.id === id);
-  if (!tx) return;
-  const original = new Date(`${tx.date}T12:00:00`);
-  const dueDate = nextDateWithDay(original.getDate());
-  const posted = { ...tx, id: uid("tx"), date: dueDate, recurring: true };
-  tx.recurring = false;
-  state.transactions.push(posted);
-  saveState(); renderApp();
-  showToast(t("recordedNow"), `${posted.description} · ${dateLabel(dueDate, { day: "numeric", month: "short" })}`);
-}
-function duplicateTransaction(id) {
-  const tx = state.transactions.find((item) => item.id === id);
-  if (!tx) return;
-  const copy = { ...tx, id: uid("tx"), date: isoDate(), recurring: false };
-  state.transactions.push(copy);
-  saveState(); renderApp();
-  showToast(t("recordDuplicated"), copy.description);
-}
-function budgetAlerts() {
-  return state.budgets.map((budget) => ({ budget, ratio: percentage(budgetSpend(budget.category), budget.limit) })).filter((item) => item.ratio >= 80).sort((a, b) => b.ratio - a.ratio);
-}
-function renderBudgetAlerts() {
-  const alerts = budgetAlerts();
-  if (!alerts.length) return "";
-  return `<section class="budget-alert" role="status"><span class="budget-alert-icon">${icon("info")}</span><div><strong>${esc(t("budgetAlert"))}</strong><span>${alerts.map((item) => `<b class="${item.ratio > 100 ? "over" : "near"}">${esc(categoryLabel(item.budget.category))} ${item.ratio}%</b>`).join(" · ")}</span></div><button class="quiet-button" type="button" data-page="budgets">${esc(t("budgets"))}${icon("chevron")}</button></section>`;
-}
-function lastMonthTransactions() {
-  const date = new Date(); date.setDate(1); date.setMonth(date.getMonth() - 1);
-  const year = date.getFullYear(), month = date.getMonth();
-  return state.transactions.filter((tx) => { const d = new Date(`${tx.date}T12:00:00`); return d.getFullYear() === year && d.getMonth() === month; });
-}
-function monthComparisonText() {
-  const last = sumTransactions(lastMonthTransactions(), "expense");
-  if (!last) return "";
-  const diff = Math.round(((monthExpense() - last) / last) * 100);
-  if (Math.abs(diff) < 3) return t("expensesSame");
-  return diff > 0 ? tf("expensesUp", { p: diff }) : tf("expensesDown", { p: -diff });
+async function restoreFromFile(file) {
+  if (file.size > 16000000) throw new Error("FILE_TOO_LARGE");
+  const payload = JSON.parse(await file.text());
+  if (NamaaCrypto.isEncrypted(payload)) {
+    NamaaCrypto.validateEnvelope(payload);
+    pendingBackup = payload;
+    openPasswordModal("restore");
+  } else await applyImportedState(payload?.data || payload);
 }
 
 function setTransactionType(type) {
@@ -1354,12 +986,13 @@ function setTransactionType(type) {
   select.innerHTML = categoryOptions(type, type === "income" ? "salary" : "food");
 }
 
-function submitTransaction(form) {
+async function submitTransaction(form) {
   const formData = new FormData(form);
   const amount = Number(formData.get("amount"));
   if (!Number.isFinite(amount) || amount <= 0) return showToast(t("addTransactionTitle"), t("invalidAmount"), "error");
   const recordId = form.dataset.recordId;
   const record = {
+    ...(recordId ? state.transactions.find(tx => tx.id === recordId) : {}),
     id: recordId || uid("tx"),
     description: String(formData.get("description") || "").trim(),
     amount,
@@ -1374,59 +1007,63 @@ function submitTransaction(form) {
   if (!record.description || !record.date || !record.accountId) return showToast(t("addTransactionTitle"), t("completeRequired"), "error");
   if (recordId) {
     state.transactions = state.transactions.map((tx) => tx.id === recordId ? record : tx);
-    showToast(t("recordUpdated"), record.description);
+
   } else {
     state.transactions.push(record);
-    showToast(t("recordAdded"), record.description);
+
   }
-  saveState();
+  await saveState();
   closeModal();
   renderApp();
+  showToast(t(recordId ? "recordUpdated" : "recordAdded"), record.description);
 }
 
-function submitBudget(form) {
+async function submitBudget(form) {
   const data = new FormData(form);
   const limit = Number(data.get("limit"));
   if (!Number.isFinite(limit) || limit <= 0) return showToast(t("addBudgetTitle"), t("validMonthlyLimit"), "error");
-  state.budgets.push({ id: uid("budget"), category: String(data.get("category")), limit });
-  saveState(); closeModal(); renderApp(); showToast(t("budgetAdded"));
+  const category = String(data.get("category"));
+  const existing = state.budgets.find(x => x.category === category);
+  if (existing) existing.limit = limit;
+  else state.budgets.push({ id: uid("budget"), category, limit });
+  await saveState(); closeModal(); renderApp(); showToast(t("budgetAdded"));
 }
 
-function submitGoal(form) {
+async function submitGoal(form) {
   const data = new FormData(form);
   const target = Number(data.get("target"));
   const saved = Number(data.get("saved"));
   const name = String(data.get("name") || "").trim();
   if (!name || !Number.isFinite(target) || target <= 0 || !Number.isFinite(saved) || saved < 0) return showToast(t("addGoalTitle"), t("completeGoal"), "error");
   state.goals.push({ id: uid("goal"), name, target, saved, dueDate: String(data.get("dueDate")), icon: "target", color: "gold" });
-  saveState(); closeModal(); renderApp(); showToast(t("goalAdded"), name);
+  await saveState(); closeModal(); renderApp(); showToast(t("goalAdded"), name);
 }
 
-function submitContribution(form) {
+async function submitContribution(form) {
   const data = new FormData(form);
   const amount = Number(data.get("amount"));
   const id = form.dataset.goalId;
   if (!Number.isFinite(amount) || amount <= 0) return showToast(t("contributeTitle"), t("invalidAmount"), "error");
-  state.goals = state.goals.map((goal) => goal.id === id ? { ...goal, saved: Number(goal.saved) + amount } : goal);
-  saveState(); closeModal(); renderApp(); showToast(t("contributionAdded"));
+  state.goals = state.goals.map((goal) => goal.id === id ? { ...goal, saved: NamaaCore.sum([goal.saved, amount]) } : goal);
+  await saveState(); closeModal(); renderApp(); showToast(t("contributionAdded"));
 }
 
-function submitAccount(form) {
+async function submitAccount(form) {
   const data = new FormData(form);
   const name = String(data.get("name") || "").trim();
   const openingBalance = Number(data.get("openingBalance"));
   if (!name || !Number.isFinite(openingBalance)) return showToast(t("addAccountTitle"), t("completeAccount"), "error");
   state.accounts.push({ id: uid("account"), name, type: String(data.get("type")), openingBalance });
-  saveState(); closeModal(); renderApp(); showToast(t("accountAdded"), name);
+  await saveState(); closeModal(); renderApp(); showToast(t("accountAdded"), name);
 }
 
-function submitRecord(form) {
+async function submitRecord(form) {
   const data = new FormData(form);
   const title = String(data.get("title") || "").trim();
   const value = String(data.get("value") || "").trim();
   if (!title || !value) return showToast(t("addRecordTitle"), t("completeRequired"), "error");
   state.vaultNotes.unshift({ id: uid("vault"), title, type: String(data.get("type")), value, notes: String(data.get("notes") || "").trim(), updatedAt: isoDate() });
-  saveState(); closeModal(); renderApp(); showToast(t("recordAdded"), title);
+  await saveState(); closeModal(); renderApp(); showToast(t("recordAdded"), title);
 }
 
 function navigate(page) {
@@ -1434,6 +1071,7 @@ function navigate(page) {
   currentPage = page;
   transactionSearch = "";
   transactionFilter = "all";
+  transactionAccount = transactionCategory = transactionFrom = transactionTo = "";
   closeModal();
   renderApp();
   document.getElementById("appContent")?.focus({ preventScroll: true });
@@ -1441,247 +1079,69 @@ function navigate(page) {
 }
 
 function renderApp() {
+  if (workspaceLocked) return;
+  document.getElementById("appShell").hidden = false;
+  document.getElementById("lockScreen").hidden = true;
+  renderSecurityStatus();
   applyLanguage();
   document.querySelectorAll("[data-i18n]").forEach((node) => { node.textContent = t(node.dataset.i18n); });
   renderNavigation();
   renderHeader();
   renderContent();
   renderIcons();
-  syncSafetyCard();
 }
 
-function deleteTransaction(id) {
+async function deleteTransaction(id) {
   const tx = state.transactions.find((item) => item.id === id);
   if (!tx || !window.confirm(t("confirmDelete"))) return;
   state.transactions = state.transactions.filter((item) => item.id !== id);
-  saveState(); renderApp(); showToast(t("recordDeleted"), tx.description);
+  await saveState(); renderApp(); showToast(t("recordDeleted"), tx.description);
 }
 
-function deleteBudget(id) {
+async function deleteBudget(id) {
   if (!window.confirm(t("confirmDelete"))) return;
   state.budgets = state.budgets.filter((item) => item.id !== id);
-  saveState(); renderApp(); showToast(t("budgetDeleted"));
+  await saveState(); renderApp(); showToast(t("budgetDeleted"));
 }
 
-function deleteGoal(id) {
+async function deleteGoal(id) {
   if (!window.confirm(t("confirmDelete"))) return;
   state.goals = state.goals.filter((item) => item.id !== id);
-  saveState(); renderApp(); showToast(t("goalDeleted"));
+  await saveState(); renderApp(); showToast(t("goalDeleted"));
 }
 
-function deleteAccount(id) {
+async function deleteAccount(id) {
   const account = state.accounts.find((item) => item.id === id);
   if (!account) return;
-  if (state.transactions.some((tx) => tx.accountId === id)) {
+  if (state.transactions.some((tx) => tx.accountId === id) || state.transfers.some(x => x.fromAccountId === id || x.toAccountId === id) || state.bills.some(x => x.accountId === id)) {
     showToast(t("accountInUse"), account.name, "error");
     return;
   }
   if (!window.confirm(t("confirmDelete"))) return;
   state.accounts = state.accounts.filter((item) => item.id !== id);
-  saveState(); renderApp(); showToast(t("accountDeleted"), account.name);
+  await saveState(); renderApp(); showToast(t("accountDeleted"), account.name);
 }
 
-function deleteRecord(id) {
+async function deleteRecord(id) {
   if (!window.confirm(t("confirmDelete"))) return;
   state.vaultNotes = state.vaultNotes.filter((item) => item.id !== id);
-  saveState(); renderApp(); showToast(t("recordDeleted"));
+  await saveState(); renderApp(); showToast(t("recordDeleted"));
 }
 
-function maybeShowMonthlyReview() {
+async function maybeShowMonthlyReview() {
   if (!state.preferences.monthlyReminder) return;
-  const key = new Date().toISOString().slice(0, 7);
+  const key = isoDate().slice(0, 7);
   if (state.preferences.lastReviewPrompt === key) return;
   state.preferences.lastReviewPrompt = key;
-  saveState();
+  await saveState();
   setTimeout(() => showToast(t("monthlySnapshot"), t("clearView")), 700);
 }
 
 function registerServiceWorker() {
   if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => navigator.serviceWorker.register("service-worker.js").catch(() => {}), { once: true });
+    const register = () => navigator.serviceWorker.register("service-worker.js").catch(() => {});
+    if (document.readyState === "complete") register();
+    else window.addEventListener("load", register, { once: true });
   }
 }
 
-function validateWebTransaction(input) {
-  if (!input || typeof input !== "object") throw new Error("Invalid input");
-  const type = input.type === "income" ? "income" : input.type === "expense" ? "expense" : null;
-  const amount = Number(input.amount);
-  if (!type || !Number.isFinite(amount) || amount <= 0) throw new Error("A positive amount and transaction type are required.");
-  const fallbackCategory = type === "income" ? "otherIncome" : "otherExpense";
-  const category = CATEGORY_META[input.category]?.type === type ? input.category : fallbackCategory;
-  const accountId = state.accounts.some((account) => account.id === input.accountId) ? input.accountId : state.accounts[0]?.id;
-  if (!accountId) throw new Error("Create an account before adding a transaction.");
-  return {
-    id: uid("tx"),
-    description: String(input.description || (type === "income" ? t("income") : t("expense"))).slice(0, 80),
-    amount,
-    type,
-    category,
-    accountId,
-    date: /^\d{4}-\d{2}-\d{2}$/.test(String(input.date || "")) ? String(input.date) : isoDate(),
-    note: String(input.note || "").slice(0, 300),
-    recurring: Boolean(input.recurring),
-    frequency: ["weekly", "monthly", "yearly"].includes(input.frequency) ? input.frequency : "monthly"
-  };
-}
-
-function registerWebMcp() {
-  const context = document.modelContext;
-  if (!context?.registerTool) return;
-  const controller = new AbortController();
-  try {
-    void Promise.resolve(context.registerTool({
-      name: "get_finance_summary",
-      title: "Get financial summary",
-      description: "Read the current on-device summary: total balance, current-month income, expenses, and savings.",
-      inputSchema: { type: "object", properties: {}, additionalProperties: false },
-      annotations: { readOnlyHint: true, untrustedContentHint: false },
-      execute() {
-        return { currency: state.currency, totalBalance: totalBalance(), monthIncome: monthIncome(), monthExpenses: monthExpense(), monthSaved: monthSaved() };
-      }
-    }, { signal: controller.signal })).catch(() => {});
-    void Promise.resolve(context.registerTool({
-      name: "add_financial_transaction",
-      title: "Add financial transaction",
-      description: "Create an income or expense transaction in the visible personal finance workspace.",
-      inputSchema: {
-        type: "object",
-        properties: {
-          description: { type: "string" }, amount: { type: "number", exclusiveMinimum: 0 }, type: { type: "string", enum: ["income", "expense"] },
-          category: { type: "string" }, accountId: { type: "string" }, date: { type: "string" }, note: { type: "string" }, recurring: { type: "boolean" }, frequency: { type: "string", enum: ["weekly", "monthly", "yearly"] }
-        },
-        required: ["amount", "type"], additionalProperties: false
-      },
-      annotations: { readOnlyHint: false, untrustedContentHint: false },
-      execute(input) {
-        const tx = validateWebTransaction(input);
-        state.transactions.push(tx);
-        saveState();
-        renderApp();
-        return { id: tx.id, description: tx.description, totalBalance: totalBalance(), currency: state.currency };
-      }
-    }, { signal: controller.signal })).catch(() => {});
-  } catch {
-    // WebMCP is optional; the visible app remains fully usable without it.
-  }
-}
-
-document.addEventListener("click", (event) => {
-  const target = event.target instanceof Element ? event.target : null;
-  if (!target) return;
-  const pageButton = target.closest("[data-page]");
-  if (pageButton) {
-    navigate(pageButton.dataset.page);
-    return;
-  }
-  const actionButton = target.closest("[data-action]");
-  if (!actionButton) return;
-  const action = actionButton.dataset.action;
-  const id = actionButton.dataset.id;
-  switch (action) {
-    case "close-modal": closeModal(); break;
-    case "add-transaction": openTransactionModal(); break;
-    case "quick-expense": openTransactionModal("expense"); break;
-    case "quick-income": openTransactionModal("income"); break;
-    case "edit-transaction": openTransactionModal("expense", state.transactions.find((tx) => tx.id === id)); break;
-    case "delete-transaction": deleteTransaction(id); break;
-    case "transaction-filter": transactionFilter = actionButton.dataset.filter || "all"; renderContent(); renderIcons(); break;
-    case "select-transaction-type": setTransactionType(actionButton.dataset.type); break;
-    case "add-budget": openBudgetModal(); break;
-    case "delete-budget": deleteBudget(id); break;
-    case "add-goal": openGoalModal(); break;
-    case "contribute-goal": openGoalContributionModal(state.goals.find((goal) => goal.id === id)); break;
-    case "delete-goal": deleteGoal(id); break;
-    case "add-account": openAccountModal(); break;
-    case "delete-account": deleteAccount(id); break;
-    case "add-record": openRecordModal(); break;
-    case "delete-record": deleteRecord(id); break;
-    case "open-backup": openBackupModal(); break;
-    case "export-json": exportJson(); break;
-    case "export-csv": exportCsv(); break;
-    case "trigger-import": document.getElementById("backupImport")?.click(); break;
-    case "toggle-privacy": state.privacyMode = !state.privacyMode; saveState(); renderApp(); break;
-    case "toggle-reminder": state.preferences.monthlyReminder = !state.preferences.monthlyReminder; saveState(); renderApp(); break;
-    case "backup-on": case "backup-change": chooseBackupFile(); break;
-    case "backup-off": turnBackupOff(); break;
-    case "backup-allow": allowBackupAccess(); break;
-    case "notice-close": { const bar = document.getElementById("noticeBar"); if (bar?.dataset.kind === "backup-on") { try { localStorage.setItem(NUDGE_KEY, String(Date.now())); } catch { /* cosmetic */ } } hideNotice(); break; }
-    case "onboarding-restore": restoreFromPickedFile(); break;
-    case "record-recurring": postRecurring(id); break;
-    case "duplicate-transaction": duplicateTransaction(id); break;
-    case "toggle-lock": openPinModal(lockRecord() ? "remove" : "set"); break;
-    case "print-report": window.print(); break;
-    default: break;
-  }
-});
-
-document.addEventListener("submit", (event) => {
-  const form = event.target;
-  if (!(form instanceof HTMLFormElement) || !form.dataset.form) return;
-  event.preventDefault();
-  switch (form.dataset.form) {
-    case "transaction": submitTransaction(form); break;
-    case "budget": submitBudget(form); break;
-    case "goal": submitGoal(form); break;
-    case "contribution": submitContribution(form); break;
-    case "account": submitAccount(form); break;
-    case "record": submitRecord(form); break;
-    case "pin": submitPin(form); break;
-    case "unlock": submitUnlock(form); break;
-    default: break;
-  }
-});
-
-document.addEventListener("input", (event) => {
-  const field = event.target;
-  if (!(field instanceof HTMLInputElement) || field.id !== "transactionSearch") return;
-  transactionSearch = field.value;
-  const cursor = field.selectionStart;
-  renderContent(); renderIcons();
-  const replacement = document.getElementById("transactionSearch");
-  if (replacement) {
-    replacement.focus();
-    replacement.setSelectionRange(cursor, cursor);
-  }
-});
-
-document.addEventListener("change", (event) => {
-  const field = event.target;
-  if (!(field instanceof HTMLElement)) return;
-  if (field instanceof HTMLSelectElement && field.dataset.setting === "language") {
-    state.language = field.value === "ar" ? "ar" : "en";
-    saveState(); renderApp();
-  }
-  if (field instanceof HTMLSelectElement && field.dataset.setting === "currency") {
-    state.currency = field.value;
-    saveState(); renderApp();
-  }
-  if (field instanceof HTMLInputElement && (field.id === "backupImport" || field.id === "restoreInput") && field.files?.[0]) {
-    restoreFromFile(field.files[0]);
-    field.value = "";
-  }
-});
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && document.getElementById("modalLayer")?.classList.contains("open")) { closeModal(); return; }
-  const isTyping = event.target instanceof HTMLInputElement || event.target instanceof HTMLTextAreaElement || event.target instanceof HTMLSelectElement;
-  if (!isTyping && event.key.toLowerCase() === "n" && !event.metaKey && !event.ctrlKey && !event.altKey) {
-    event.preventDefault(); openTransactionModal();
-  }
-});
-
-document.getElementById("languageToggle")?.addEventListener("click", () => {
-  state.language = state.language === "ar" ? "en" : "ar";
-  saveState(); renderApp();
-});
-document.getElementById("privacyToggle")?.addEventListener("click", () => { state.privacyMode = !state.privacyMode; saveState(); renderApp(); });
-document.getElementById("mobileMenu")?.addEventListener("click", openMobileNavigation);
-document.getElementById("profileMenu")?.addEventListener("click", () => navigate("settings"));
-document.getElementById("openBackup")?.addEventListener("click", openBackupModal);
-
-showLockScreen();
-renderApp();
-registerServiceWorker();
-registerWebMcp();
-maybeShowMonthlyReview();
-initBackup();
