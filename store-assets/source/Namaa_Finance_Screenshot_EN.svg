@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1366" height="768" viewBox="0 0 1366 768">
+  <defs>
+    <linearGradient id="sidebar" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#123552"/>
+      <stop offset="0.72" stop-color="#0b2035"/>
+      <stop offset="1" stop-color="#081b2c"/>
+    </linearGradient>
+    <linearGradient id="balance" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#173f5b"/>
+      <stop offset="0.64" stop-color="#0c2942"/>
+      <stop offset="1" stop-color="#0a706a"/>
+    </linearGradient>
+    <linearGradient id="button" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a9574"/>
+      <stop offset="1" stop-color="#08745c"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="11" flood-color="#15354d" flood-opacity=".13"/>
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#17354f" flood-opacity=".08"/>
+    </filter>
+  </defs>
+
+  <rect width="1366" height="768" fill="#edf3f8"/>
+  <rect width="260" height="768" fill="url(#sidebar)"/>
+  <circle cx="235" cy="26" r="130" fill="#3da0ad" opacity=".12"/>
+
+  <g transform="translate(25 27)" font-family="Segoe UI, Arial, sans-serif">
+    <rect width="39" height="39" rx="12" fill="#f6bd57"/>
+    <path d="M10 29V21M19.5 29V15M29 29V10M7 29h25M9 16l7-5 5 3.5 10-7" fill="none" stroke="#15354d" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="53" y="24" fill="#fff" font-size="20" font-weight="750">Namaa<tspan fill="#82dbcd" font-weight="500">Finance</tspan></text>
+  </g>
+
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#acc0d0">
+    <g transform="translate(16 103)">
+      <rect width="228" height="46" rx="12" fill="#216261" opacity=".56"/>
+      <rect width="3" height="46" rx="2" fill="#77d6c4"/>
+      <rect x="18" y="14" width="17" height="17" rx="3" fill="none" stroke="#fff" stroke-width="1.6"/>
+      <rect x="41" y="15" width="17" height="8" rx="2" fill="none" stroke="#fff" stroke-width="1.4"/>
+      <text x="72" y="29" fill="#fff" font-weight="700">Dashboard</text>
+    </g>
+    <g transform="translate(34 170)">
+      <path d="M0 0h19M0 6h15M0 12h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <text x="39" y="10">Transactions</text>
+    </g>
+    <g transform="translate(34 215)">
+      <rect width="19" height="19" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M5 6h9M5 11h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      <text x="39" y="14">Budgets</text>
+    </g>
+    <g transform="translate(34 260)">
+      <circle cx="9.5" cy="9.5" r="8.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="9.5" cy="9.5" r="3.9" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <text x="39" y="14">Goals</text>
+    </g>
+    <g transform="translate(34 305)">
+      <path d="M0 5 9.5 0 19 5H0ZM3 7v9M9.5 7v9M16 7v9M0 18h19" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+      <text x="39" y="14">Accounts</text>
+    </g>
+    <g transform="translate(34 350)">
+      <path d="M0 18V1M0 18h19M4 14l4-5 4 3 5-8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="39" y="14">Reports</text>
+    </g>
+    <g transform="translate(34 395)">
+      <rect width="19" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <circle cx="9.5" cy="10" r="3.3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <text x="39" y="14">Financial vault</text>
+    </g>
+    <g transform="translate(34 440)">
+      <circle cx="9.5" cy="9.5" r="7.5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <circle cx="9.5" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <text x="39" y="14">Preferences</text>
+    </g>
+  </g>
+
+  <g transform="translate(16 623)" font-family="Segoe UI, Arial, sans-serif">
+    <rect width="228" height="83" rx="14" fill="#0b273d" stroke="#27516c" stroke-opacity=".55"/>
+    <rect x="14" y="18" width="34" height="34" rx="10" fill="#114b50"/>
+    <path d="M31 22l9 3v6.5c0 5.2-3.5 8.5-9 10.8-5.5-2.3-9-5.6-9-10.8V25l9-3Z" fill="none" stroke="#8df0d8" stroke-width="1.6"/>
+    <text x="60" y="33" fill="#e9f7fb" font-size="12" font-weight="700">Private on this device</text>
+    <text x="60" y="51" fill="#9db6c6" font-size="10">Back up your records anytime</text>
+    <path d="M205 34l5 5-5 5" fill="none" stroke="#88a8bb" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <rect x="260" width="1106" height="90" fill="#f9fcfe" opacity=".88"/>
+  <rect x="260" y="89" width="1106" height="1" fill="#d7e1e9"/>
+  <g transform="translate(304 25)" font-family="Segoe UI, Arial, sans-serif">
+    <text y="13" fill="#08765b" font-size="10" font-weight="800" letter-spacing="1.5">YOUR MONEY, IN FOCUS</text>
+    <text y="43" fill="#0d263e" font-size="25" font-weight="780">Dashboard</text>
+  </g>
+  <g transform="translate(980 22)" font-family="Segoe UI, Arial, sans-serif">
+    <rect width="43" height="43" rx="11" fill="#fff" stroke="#dce5ed"/>
+    <path d="M12 22s3-5 9.5-5 9.5 5 9.5 5-3 5-9.5 5S12 22 12 22Z" fill="none" stroke="#36536d" stroke-width="1.6"/>
+    <circle cx="21.5" cy="22" r="2.3" fill="none" stroke="#36536d" stroke-width="1.6"/>
+    <rect x="52" width="100" height="43" rx="11" fill="#fff" stroke="#dce5ed"/>
+    <circle cx="72" cy="21" r="9" fill="none" stroke="#36536d" stroke-width="1.5"/>
+    <path d="M63 21h18M72 12c2 2.6 3 5.8 3 9s-1 6.4-3 9c-2-2.6-3-5.8-3-9s1-6.4 3-9Z" fill="none" stroke="#36536d" stroke-width="1.35"/>
+    <text x="88" y="26" fill="#15354d" font-size="12" font-weight="700">العربية</text>
+    <rect x="164" width="170" height="43" rx="11" fill="#fff" stroke="#dce5ed"/>
+    <rect x="174" y="9" width="25" height="25" rx="7" fill="#33a18d"/>
+    <text x="186.5" y="26" fill="#fff" font-size="11" font-weight="800" text-anchor="middle">N</text>
+    <text x="209" y="18" fill="#18334a" font-size="10" font-weight="750">Sample workspace</text>
+    <text x="209" y="30" fill="#8794a4" font-size="9">Personal workspace</text>
+  </g>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="304" y="139" fill="#0d263e" font-size="25" font-weight="780">Good evening</text>
+    <text x="304" y="163" fill="#637285" font-size="13">Here is a clear view of your money this month.</text>
+    <g transform="translate(1164 123)">
+      <rect width="158" height="42" rx="10" fill="url(#button)" filter="url(#soft)"/>
+      <path d="M19 21h12M25 15v12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+      <text x="43" y="26" fill="#fff" font-size="12" font-weight="750">Add transaction</text>
+    </g>
+
+    <g transform="translate(304 190)" filter="url(#shadow)">
+      <rect width="278" height="146" rx="18" fill="url(#balance)"/>
+      <circle cx="241" cy="122" r="56" fill="none" stroke="#a6ecd9" stroke-opacity=".08" stroke-width="19"/>
+      <circle cx="23" cy="23" r="4" fill="#0aa57a"/>
+      <text x="34" y="27" fill="#bed5df" font-size="11" font-weight="700">TOTAL BALANCE</text>
+      <text x="23" y="72" fill="#fff" font-size="29" font-weight="780">JOD 3,240.00</text>
+      <path d="M24 101h15" stroke="#8df0d8" stroke-width="1.8" stroke-linecap="round"/>
+      <text x="47" y="105" fill="#c8dfe8" font-size="11">Available across your accounts</text>
+    </g>
+    <g transform="translate(596 190)" filter="url(#soft)">
+      <rect width="210" height="146" rx="18" fill="#fff" stroke="#d9e4ec"/>
+      <rect x="20" y="20" width="37" height="37" rx="10" fill="#e7f8f2"/>
+      <path d="M38.5 48V29M31.5 36l7-7 7 7" fill="none" stroke="#08765b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="20" y="79" fill="#637285" font-size="11" font-weight="700">INCOME THIS MONTH</text>
+      <text x="20" y="109" fill="#0d263e" font-size="22" font-weight="780">JOD 1,870.00</text>
+      <text x="20" y="130" fill="#08765b" font-size="10" font-weight="700">▲ 12.4% from last month</text>
+    </g>
+    <g transform="translate(820 190)" filter="url(#soft)">
+      <rect width="210" height="146" rx="18" fill="#fff" stroke="#d9e4ec"/>
+      <rect x="20" y="20" width="37" height="37" rx="10" fill="#ffeded"/>
+      <path d="M38.5 29v19M31.5 41l7 7 7-7" fill="none" stroke="#c95050" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="20" y="79" fill="#637285" font-size="11" font-weight="700">EXPENSES THIS MONTH</text>
+      <text x="20" y="109" fill="#0d263e" font-size="22" font-weight="780">JOD 1,072.50</text>
+      <text x="20" y="130" fill="#c95050" font-size="10" font-weight="700">▼ 5.8% from last month</text>
+    </g>
+    <g transform="translate(1044 190)" filter="url(#soft)">
+      <rect width="278" height="146" rx="18" fill="#fff" stroke="#d9e4ec"/>
+      <rect x="20" y="20" width="37" height="37" rx="10" fill="#fff5df"/>
+      <circle cx="38.5" cy="38.5" r="12" fill="none" stroke="#9a681b" stroke-width="2"/>
+      <circle cx="38.5" cy="38.5" r="5.5" fill="none" stroke="#9a681b" stroke-width="2"/>
+      <text x="20" y="79" fill="#637285" font-size="11" font-weight="700">SAVED THIS MONTH</text>
+      <text x="20" y="109" fill="#0d263e" font-size="22" font-weight="780">JOD 797.50</text>
+      <text x="20" y="130" fill="#08765b" font-size="10" font-weight="700">42.6% of income saved</text>
+    </g>
+
+    <g transform="translate(304 352)" filter="url(#soft)">
+      <rect width="638" height="356" rx="18" fill="#fff" stroke="#d9e4ec"/>
+      <text x="24" y="30" fill="#0d263e" font-size="15" font-weight="760">Cash flow</text>
+      <text x="24" y="50" fill="#637285" font-size="11">Income and spending over the last six months</text>
+      <g transform="translate(25 83)">
+        <path d="M0 205H582M0 153H582M0 102H582M0 51H582" stroke="#e8eef3" stroke-width="1"/>
+        <path d="M14 157 C57 146,72 134,108 139 S151 97,183 111 S241 81,276 99 S333 74,363 75 S424 49,458 64 S524 31,567 42" fill="none" stroke="#0aa57a" stroke-width="3.2" stroke-linecap="round"/>
+        <path d="M14 180 C54 168,82 183,108 161 S153 149,183 161 S230 138,276 151 S330 157,363 136 S424 146,458 119 S525 128,567 109" fill="none" stroke="#e76f6f" stroke-width="3.2" stroke-linecap="round"/>
+        <g fill="#0aa57a"><circle cx="108" cy="139" r="4"/><circle cx="276" cy="99" r="4"/><circle cx="458" cy="64" r="4"/><circle cx="567" cy="42" r="4"/></g>
+        <g fill="#e76f6f"><circle cx="108" cy="161" r="4"/><circle cx="276" cy="151" r="4"/><circle cx="458" cy="119" r="4"/><circle cx="567" cy="109" r="4"/></g>
+        <g fill="#8794a4" font-size="10"><text x="7" y="229">Apr</text><text x="117" y="229">May</text><text x="224" y="229">Jun</text><text x="332" y="229">Jul</text><text x="441" y="229">Aug</text><text x="550" y="229">Sep</text></g>
+      </g>
+      <g transform="translate(458 24)" font-size="10" font-weight="700">
+        <circle cx="2" cy="1" r="4" fill="#0aa57a"/><text x="12" y="5" fill="#637285">Income</text>
+        <circle cx="73" cy="1" r="4" fill="#e76f6f"/><text x="83" y="5" fill="#637285">Expense</text>
+      </g>
+    </g>
+    <g transform="translate(957 352)" filter="url(#soft)">
+      <rect width="365" height="169" rx="18" fill="#fff" stroke="#d9e4ec"/>
+      <text x="22" y="30" fill="#0d263e" font-size="15" font-weight="760">Budget progress</text>
+      <text x="22" y="50" fill="#637285" font-size="11">September 2026</text>
+      <g transform="translate(22 75)" font-size="11">
+        <text y="11" fill="#17354d" font-weight="700">Food &amp; groceries</text><text x="293" y="11" fill="#637285" text-anchor="end">JOD 214 / 350</text>
+        <rect y="24" width="321" height="7" rx="4" fill="#e9eff3"/><rect y="24" width="196" height="7" rx="4" fill="#e76f6f"/>
+        <text y="59" fill="#17354d" font-weight="700">Utilities &amp; bills</text><text x="293" y="59" fill="#637285" text-anchor="end">JOD 123 / 180</text>
+        <rect y="72" width="321" height="7" rx="4" fill="#e9eff3"/><rect y="72" width="220" height="7" rx="4" fill="#f2ad43"/>
+      </g>
+    </g>
+    <g transform="translate(957 537)" filter="url(#soft)">
+      <rect width="365" height="171" rx="18" fill="#fff" stroke="#d9e4ec"/>
+      <text x="22" y="30" fill="#0d263e" font-size="15" font-weight="760">Recent activity</text>
+      <text x="22" y="50" fill="#637285" font-size="11">This month</text>
+      <g transform="translate(21 75)" font-size="11">
+        <circle cx="14" cy="14" r="14" fill="#e7f8f2"/><path d="M14 8v12M9 13l5-5 5 5" fill="none" stroke="#08765b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="39" y="12" fill="#17354d" font-weight="700">Salary</text><text x="39" y="27" fill="#8794a4">29 Sep</text><text x="317" y="18" fill="#08765b" font-weight="700" text-anchor="end">+ JOD 1,200</text>
+        <line x1="0" y1="41" x2="321" y2="41" stroke="#edf2f5"/>
+        <circle cx="14" cy="57" r="14" fill="#ffeded"/><path d="M8 57h12M10 53h8M10 61h6" stroke="#c95050" stroke-width="1.5" stroke-linecap="round"/>
+        <text x="39" y="55" fill="#17354d" font-weight="700">Groceries</text><text x="39" y="70" fill="#8794a4">28 Sep</text><text x="317" y="61" fill="#c95050" font-weight="700" text-anchor="end">− JOD 62.50</text>
+      </g>
+    </g>
+  </g>
+</svg>
