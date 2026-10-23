@@ -1,3 +1,5 @@
-# Store artwork source
+# Original Microsoft Store artwork
 
-`../icons/icon.svg` is the vector source for the Namaa Finance app mark. Generate the final Microsoft Store logo and screenshot assets from the finished hosted application during the Partner Center submission flow, so their dimensions and package requirements match the current Store requirements.
+These are the unchanged artwork files from the saved Namaa Finance asset package. The logo and artwork remain available for reuse. The English/Arabic screenshot compositions and their SVG sources predate the secure edition. They do not show the new password, bill or transfer features and are not current release screenshots.
+
+Before submitting the upgraded app, capture new screenshots from the actual installed application. Updated bilingual features and release notes are in `../STORE_SUBMISSION.md`. The old listing copy in this folder is retained only as a historical reference.
